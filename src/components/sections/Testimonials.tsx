@@ -16,7 +16,7 @@ export function Testimonials() {
           </p>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
+          <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-[-0.03em] text-foreground">
             People love Photiva
           </h2>
         </FadeIn>
@@ -52,7 +52,7 @@ export function Testimonials() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 rounded-2xl border border-border bg-surface-elevated p-8">
           {stats.map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className="text-3xl font-bold text-foreground">
+              <div className="font-display text-3xl font-extrabold tracking-[-0.02em] text-foreground">
                 <AnimatedCounter value={stat.value} suffix={stat.suffix} />
               </div>
               <p className="mt-1 text-sm text-muted">{stat.label}</p>

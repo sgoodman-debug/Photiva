@@ -27,7 +27,7 @@ export function Pricing() {
           </p>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
+          <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-[-0.03em] text-foreground">
             One price. Yours forever.
           </h2>
         </FadeIn>
@@ -56,7 +56,7 @@ export function Pricing() {
 
               {/* Price */}
               <div className="flex items-baseline gap-2 mb-1">
-                <span className="text-5xl font-bold text-foreground">$29.99</span>
+                <span className="font-display text-5xl font-extrabold tracking-[-0.03em] text-foreground">$29.99</span>
                 <Badge variant="accent">One-time</Badge>
               </div>
               <p className="text-sm text-muted mb-8">Pay once. Use forever. All features included.</p>

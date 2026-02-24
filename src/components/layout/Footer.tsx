@@ -5,7 +5,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 font-bold text-lg text-foreground mb-3">
+            <div className="flex items-center gap-2 font-display font-bold text-lg tracking-[-0.02em] text-foreground mb-3">
               <svg width="24" height="24" viewBox="0 0 32 32" fill="none" className="text-accent">
                 <rect width="32" height="32" rx="8" fill="currentColor" fillOpacity="0.15" />
                 <path

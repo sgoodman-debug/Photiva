@@ -19,20 +19,20 @@ export function Hero() {
           {/* Left: Copy */}
           <div className="max-w-xl">
             <FadeIn delay={0.1}>
-              <p className="text-sm text-muted mb-4">
+              <p className="text-sm font-medium tracking-wide text-muted mb-5">
                 Stop losing your best photos in a sea of duplicates
               </p>
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground leading-[1.1]">
+              <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-[-0.035em] text-foreground leading-[1.08]">
                 Clean your photo library.{" "}
-                <span className="text-accent">Effortlessly.</span>
+                <span className="text-gradient">Effortlessly.</span>
               </h1>
             </FadeIn>
 
             <FadeIn delay={0.3}>
-              <p className="mt-6 text-lg text-muted leading-relaxed max-w-lg">
+              <p className="mt-6 text-lg text-muted leading-relaxed max-w-lg tracking-[-0.01em]">
                 Thousands of duplicates, blurry shots, and screenshots are burying your best
                 memories. Photiva finds them all — and gives you a clean, organized library
                 in minutes, not hours.
@@ -64,7 +64,7 @@ export function Hero() {
           {/* Right: Screenshot placeholder */}
           <FadeIn direction="left" delay={0.3}>
             <div className="relative">
-              <div className="aspect-[4/3] rounded-2xl border border-border bg-surface-elevated overflow-hidden shadow-2xl shadow-black/10">
+              <div className="aspect-[4/3] rounded-2xl border border-border bg-surface-elevated overflow-hidden shadow-2xl shadow-black/15 dark:shadow-black/40">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent" />
                 <div className="flex h-full flex-col items-center justify-center gap-3 p-8">
                   <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-muted-foreground/50">

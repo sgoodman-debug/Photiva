@@ -33,7 +33,7 @@ export function HowItWorks() {
           </p>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
+          <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-[-0.03em] text-foreground">
             Three steps to a clean library
           </h2>
         </FadeIn>
@@ -49,7 +49,7 @@ export function HowItWorks() {
               <div className="mb-2 text-xs font-bold text-accent uppercase tracking-widest">
                 Step {step.number}
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">
+              <h3 className="font-display text-xl font-bold tracking-[-0.02em] text-foreground mb-2">
                 {step.title}
               </h3>
               <p className="text-sm text-muted leading-relaxed max-w-xs mx-auto">

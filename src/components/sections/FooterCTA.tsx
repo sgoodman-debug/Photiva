@@ -9,7 +9,7 @@ export function FooterCTA() {
     <Section background="accent">
       <div className="text-center">
         <FadeIn>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
+          <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-[-0.03em] text-foreground">
             Your library deserves better
           </h2>
         </FadeIn>

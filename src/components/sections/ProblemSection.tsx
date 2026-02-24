@@ -35,7 +35,7 @@ export function ProblemSection() {
           </p>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
+          <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-[-0.03em] text-foreground">
             Your photo library is out of control
           </h2>
         </FadeIn>
@@ -54,7 +54,7 @@ export function ProblemSection() {
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent">
                 {icons[card.icon]}
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">{card.title}</h3>
+              <h3 className="font-display text-lg font-bold tracking-[-0.02em] text-foreground mb-2">{card.title}</h3>
               <p className="text-sm text-muted leading-relaxed">{card.description}</p>
             </div>
           </StaggerItem>

@@ -64,7 +64,7 @@ export function PrivacySection() {
           </p>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
+          <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-[-0.03em] text-foreground">
             Your photos never leave your Mac
           </h2>
         </FadeIn>

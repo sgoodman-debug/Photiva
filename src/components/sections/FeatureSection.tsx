@@ -25,7 +25,7 @@ export function FeatureSection({ feature, reversed = false }: FeatureSectionProp
             <Badge variant="accent" className="mb-4">
               {feature.badge}
             </Badge>
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground leading-tight">
+            <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-[-0.03em] text-foreground leading-tight">
               {feature.title}
             </h2>
             <p className="mt-4 text-muted leading-relaxed">
