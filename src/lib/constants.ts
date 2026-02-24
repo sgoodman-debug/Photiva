@@ -1,4 +1,4 @@
-import type { Feature, FAQ, Testimonial, ComparisonRow, ProblemCard, Step } from "@/types";
+import type { Feature, FAQ, Testimonial, ComparisonRow, ProblemCard, Step, CapabilityItem } from "@/types";
 
 export const problemCards: ProblemCard[] = [
   {
@@ -220,6 +220,99 @@ export const stats = [
   { value: 50000, suffix: "+", label: "Libraries cleaned" },
   { value: 120, suffix: " TB", label: "Storage recovered" },
   { value: 8, suffix: "M+", label: "Duplicates found" },
+];
+
+export const capabilities: CapabilityItem[] = [
+  {
+    icon: "wand",
+    title: "Auto Mark",
+    description:
+      "Intuitive adjustable rules help determine which photo to keep in each group of duplicates.",
+  },
+  {
+    icon: "image-search",
+    title: "Similar Photos",
+    description:
+      "Powerful search engine isolates groups of similar photos with an adjustable similarity threshold.",
+  },
+  {
+    icon: "timer",
+    title: "Series of Shots",
+    description:
+      "Set a maximum time gap between photos to find burst series and keep only the best shots.",
+  },
+  {
+    icon: "lock",
+    title: "Auto Lock",
+    description:
+      "Keeps already-sorted photos safe. Locked photos are used for comparison but can't be marked for removal.",
+  },
+  {
+    icon: "film",
+    title: "Movies",
+    description:
+      "Supports various video formats including AVI, MKV, and WMV — even those macOS doesn't support natively.",
+  },
+  {
+    icon: "edit",
+    title: "Edited Photos",
+    description:
+      "Finds resized, rotated, and filter-enhanced photos from apps like Photoshop, Pixelmator, and more.",
+  },
+  {
+    icon: "layout",
+    title: "Photo Browser",
+    description:
+      "A modern browser with EXIF Info Panel, Movie Preview, Quick Look, Path Bar, and more.",
+  },
+  {
+    icon: "type",
+    title: "Batch Renaming",
+    description:
+      "Bulk rename files while copying or moving them to another folder for better organization.",
+  },
+  {
+    icon: "trash-safe",
+    title: "Safe Removal",
+    description:
+      "Never deletes files permanently. Everything goes to Trash so you can always restore if needed.",
+  },
+  {
+    icon: "file-image",
+    title: "Image Formats",
+    description:
+      "Supports all popular formats including RAW, HEIC, PDF, DNG, and WebP.",
+  },
+  {
+    icon: "columns",
+    title: "Results Sorting",
+    description:
+      "Three review modes — One by One, Face-to-Face, and All in One — with single-click marking.",
+  },
+  {
+    icon: "sliders",
+    title: "Powerful Settings",
+    description:
+      "Find duplicates, similar photos, or series of shots with precise control over search parameters.",
+  },
+  {
+    icon: "zap",
+    title: "Blazing Fast",
+    description:
+      "64-bit, ARM, and multicore optimized to reveal the real power of your Mac.",
+  },
+  {
+    icon: "monitor",
+    title: "macOS Native",
+    description:
+      "Takes full advantage of the latest macOS features with a beautiful native interface.",
+  },
+  {
+    icon: "sparkles",
+    title: "And More",
+    description:
+      "A full suite of enhancements and features throughout the entire app, with regular updates.",
+  },
 ];
 
 export const navLinks = [

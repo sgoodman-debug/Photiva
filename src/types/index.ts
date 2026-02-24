@@ -36,3 +36,9 @@ export interface Step {
   title: string;
   description: string;
 }
+
+export interface CapabilityItem {
+  icon: string;
+  title: string;
+  description: string;
+}

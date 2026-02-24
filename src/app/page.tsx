@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { ProblemSection } from "@/components/sections/ProblemSection";
 import { FeatureSection } from "@/components/sections/FeatureSection";
+import { CapabilityGrid } from "@/components/sections/CapabilityGrid";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { PrivacySection } from "@/components/sections/PrivacySection";
 import { ComparisonTable } from "@/components/sections/ComparisonTable";
@@ -24,6 +25,7 @@ export default function Home() {
             <FeatureSection key={feature.id} feature={feature} reversed={i % 2 !== 0} />
           ))}
         </div>
+        <CapabilityGrid />
         <HowItWorks />
         <PrivacySection />
         <ComparisonTable />
