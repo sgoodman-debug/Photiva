@@ -34,7 +34,7 @@ export function Hero() {
             <FadeIn delay={0.3}>
               <p className="mt-6 text-lg text-muted leading-relaxed max-w-lg">
                 Thousands of duplicates, blurry shots, and screenshots are burying your best
-                memories. PhotoSweeper finds them all — and gives you a clean, organized library
+                memories. Photiva finds them all — and gives you a clean, organized library
                 in minutes, not hours.
               </p>
             </FadeIn>

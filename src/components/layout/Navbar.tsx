@@ -37,7 +37,7 @@ export function Navbar() {
             />
             <circle cx="16" cy="16" r="2" fill="currentColor" />
           </svg>
-          PhotoSweeper
+          Photiva
         </a>
 
         {/* Desktop nav */}

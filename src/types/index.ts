@@ -20,7 +20,7 @@ export interface Testimonial {
 
 export interface ComparisonRow {
   feature: string;
-  photoSweeper: string | boolean;
+  photiva: string | boolean;
   subscriptionApps: string | boolean;
   freeTools: string | boolean;
 }

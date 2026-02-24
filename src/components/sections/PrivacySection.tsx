@@ -70,7 +70,7 @@ export function PrivacySection() {
         </FadeIn>
         <FadeIn delay={0.2}>
           <p className="mt-4 text-muted max-w-2xl mx-auto">
-            PhotoSweeper processes everything locally. No cloud uploads. No servers. No accounts.
+            Photiva processes everything locally. No cloud uploads. No servers. No accounts.
             No telemetry. Your library is analyzed entirely on-device using Apple&apos;s native
             frameworks. We literally cannot see your photos — and that&apos;s by design.
           </p>

@@ -15,7 +15,7 @@ export function FooterCTA() {
         </FadeIn>
         <FadeIn delay={0.1}>
           <p className="mt-4 text-muted max-w-lg mx-auto">
-            Download PhotoSweeper and take back control of your photos. Free trial — no account required.
+            Download Photiva and take back control of your photos. Free trial — no account required.
           </p>
         </FadeIn>
         <FadeIn delay={0.2}>

@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "PhotoSweeper — The Most Comprehensive Photo Library Cleaner for Mac",
+  title: "Photiva — The Most Comprehensive Photo Library Cleaner for Mac",
   description:
     "Remove duplicates, organize your library, compress photos & videos, and protect sensitive images — all on-device. One-time purchase. No subscription.",
   keywords: [
@@ -22,18 +22,18 @@ export const metadata: Metadata = {
     "remove duplicate photos",
   ],
   openGraph: {
-    title: "PhotoSweeper — Clean Up Your Mac Photo Library",
+    title: "Photiva — Clean Up Your Mac Photo Library",
     description:
       "Remove duplicates, organize your library, compress photos & videos — all on-device. One-time purchase.",
-    url: "https://photosweeper.app",
-    siteName: "PhotoSweeper",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "PhotoSweeper app dashboard" }],
+    url: "https://photiva.app",
+    siteName: "Photiva",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Photiva app dashboard" }],
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "PhotoSweeper — Clean Up Your Mac Photo Library",
+    title: "Photiva — Clean Up Your Mac Photo Library",
     description:
       "Remove duplicates, organize your library, compress photos & videos — all on-device. One-time purchase.",
     images: ["/og-image.png"],
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  name: "PhotoSweeper",
+  name: "Photiva",
   operatingSystem: "macOS",
   applicationCategory: "UtilitiesApplication",
   description:

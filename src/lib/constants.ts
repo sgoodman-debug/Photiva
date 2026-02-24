@@ -27,7 +27,7 @@ export const features: Feature[] = [
     badge: "SMART CLEANUP",
     title: "One click. Every problem found.",
     description:
-      "PhotoSweeper scans your entire library and categorizes every issue — duplicates, blurry photos, screenshots, oversized videos, and Live Photo bloat. No manual sorting. No guessing. Just a clean report of exactly what's eating your storage.",
+      "Photiva scans your entire library and categorizes every issue — duplicates, blurry photos, screenshots, oversized videos, and Live Photo bloat. No manual sorting. No guessing. Just a clean report of exactly what's eating your storage.",
     bullets: [
       "Finds exact duplicates using SHA-256 hash comparison",
       "Detects visually similar photos using perceptual hashing and ML",
@@ -57,7 +57,7 @@ export const features: Feature[] = [
     badge: "ORGANIZATION",
     title: "From chaos to a perfectly structured library.",
     description:
-      "Choose from 5 organization systems — or build your own with custom templates. PhotoSweeper reads EXIF data from every photo and sorts your library into a clean folder structure. Preview exactly what will happen before a single file moves.",
+      "Choose from 5 organization systems — or build your own with custom templates. Photiva reads EXIF data from every photo and sorts your library into a clean folder structure. Preview exactly what will happen before a single file moves.",
     bullets: [
       "5 built-in systems: Chronological, Event-Based, Camera-First, Flat Daily, and Custom templates",
       "Full EXIF metadata extraction — date, camera, GPS, lens info",
@@ -101,7 +101,7 @@ export const features: Feature[] = [
     badge: "CONTACT CLEANUP",
     title: "Your contacts are a mess too.",
     description:
-      "Duplicate contacts pile up from email, iCloud, and phone syncs. PhotoSweeper finds them — by exact name, phone number, or fuzzy matching — and merges them intelligently. Emails, phone numbers, and names are combined. Duplicates are deleted.",
+      "Duplicate contacts pile up from email, iCloud, and phone syncs. Photiva finds them — by exact name, phone number, or fuzzy matching — and merges them intelligently. Emails, phone numbers, and names are combined. Duplicates are deleted.",
     bullets: [
       "Exact name and phone number matching across all sources",
       "Fuzzy name matching — catches \"John Smith\" vs \"jon smith\" vs \"Jon Smith\"",
@@ -116,7 +116,7 @@ export const steps: Step[] = [
     number: 1,
     title: "Drop your folder",
     description:
-      "Drag any photo folder into PhotoSweeper, or import directly from your Photos Library.",
+      "Drag any photo folder into Photiva, or import directly from your Photos Library.",
   },
   {
     number: 2,
@@ -133,23 +133,23 @@ export const steps: Step[] = [
 ];
 
 export const comparisonRows: ComparisonRow[] = [
-  { feature: "One-time purchase", photoSweeper: true, subscriptionApps: false, freeTools: true },
-  { feature: "Duplicate detection (exact + visual)", photoSweeper: true, subscriptionApps: "Partial", freeTools: "Basic" },
-  { feature: "Blurry photo detection", photoSweeper: true, subscriptionApps: false, freeTools: false },
-  { feature: "Smart organization (5 systems)", photoSweeper: true, subscriptionApps: false, freeTools: false },
-  { feature: "Event auto-detection", photoSweeper: true, subscriptionApps: false, freeTools: false },
-  { feature: "Secure encrypted vault", photoSweeper: true, subscriptionApps: false, freeTools: false },
-  { feature: "Photo & video compression", photoSweeper: true, subscriptionApps: "Partial", freeTools: false },
-  { feature: "Contact cleanup", photoSweeper: true, subscriptionApps: false, freeTools: false },
-  { feature: "100% on-device processing", photoSweeper: true, subscriptionApps: false, freeTools: "Varies" },
-  { feature: "Rollback / undo", photoSweeper: true, subscriptionApps: false, freeTools: false },
-  { feature: "RAW + sidecar support", photoSweeper: true, subscriptionApps: "Partial", freeTools: false },
+  { feature: "One-time purchase", photiva: true, subscriptionApps: false, freeTools: true },
+  { feature: "Duplicate detection (exact + visual)", photiva: true, subscriptionApps: "Partial", freeTools: "Basic" },
+  { feature: "Blurry photo detection", photiva: true, subscriptionApps: false, freeTools: false },
+  { feature: "Smart organization (5 systems)", photiva: true, subscriptionApps: false, freeTools: false },
+  { feature: "Event auto-detection", photiva: true, subscriptionApps: false, freeTools: false },
+  { feature: "Secure encrypted vault", photiva: true, subscriptionApps: false, freeTools: false },
+  { feature: "Photo & video compression", photiva: true, subscriptionApps: "Partial", freeTools: false },
+  { feature: "Contact cleanup", photiva: true, subscriptionApps: false, freeTools: false },
+  { feature: "100% on-device processing", photiva: true, subscriptionApps: false, freeTools: "Varies" },
+  { feature: "Rollback / undo", photiva: true, subscriptionApps: false, freeTools: false },
+  { feature: "RAW + sidecar support", photiva: true, subscriptionApps: "Partial", freeTools: false },
 ];
 
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "I recovered over 45 GB of storage just from duplicates and old screenshots. PhotoSweeper found things I'd been ignoring for years.",
+      "I recovered over 45 GB of storage just from duplicates and old screenshots. Photiva found things I'd been ignoring for years.",
     name: "Alex Chen",
     role: "Photographer",
   },
@@ -186,12 +186,12 @@ export const faqs: FAQ[] = [
   {
     question: "Does it work with iCloud Photo Library?",
     answer:
-      "PhotoSweeper works with any folder on your Mac, including locally synced iCloud photos. It can also import directly from your Photos Library database.",
+      "Photiva works with any folder on your Mac, including locally synced iCloud photos. It can also import directly from your Photos Library database.",
   },
   {
     question: "How is this different from Gemini or CleanMyMac?",
     answer:
-      "PhotoSweeper combines duplicate detection, smart organization, compression, vault encryption, and contact cleanup in one app — with no subscription. Most alternatives only cover one or two of these and charge you every year.",
+      "Photiva combines duplicate detection, smart organization, compression, vault encryption, and contact cleanup in one app — with no subscription. Most alternatives only cover one or two of these and charge you every year.",
   },
   {
     question: "Is there a free trial?",

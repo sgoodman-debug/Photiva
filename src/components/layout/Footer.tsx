@@ -16,7 +16,7 @@ export function Footer() {
                 />
                 <circle cx="16" cy="16" r="2" fill="currentColor" />
               </svg>
-              PhotoSweeper
+              Photiva
             </div>
             <p className="text-sm text-muted max-w-sm">
               The most comprehensive photo library cleaner for Mac. One-time purchase. No subscription.
@@ -45,7 +45,7 @@ export function Footer() {
 
         <div className="mt-10 pt-6 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} PhotoSweeper. All rights reserved.
+            &copy; {new Date().getFullYear()} Photiva. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground">
             Requires macOS 14 Sonoma or later. Universal app — Apple Silicon &amp; Intel.

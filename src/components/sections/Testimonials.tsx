@@ -17,7 +17,7 @@ export function Testimonials() {
         </FadeIn>
         <FadeIn delay={0.1}>
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
-            People love PhotoSweeper
+            People love Photiva
           </h2>
         </FadeIn>
       </div>

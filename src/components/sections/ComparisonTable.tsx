@@ -38,7 +38,7 @@ export function ComparisonTable() {
         </FadeIn>
         <FadeIn delay={0.1}>
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
-            PhotoSweeper vs. the rest
+            Photiva vs. the rest
           </h2>
         </FadeIn>
       </div>
@@ -50,7 +50,7 @@ export function ComparisonTable() {
               <tr className="border-b border-border">
                 <th className="py-4 pr-4 text-left font-medium text-muted">Feature</th>
                 <th className="py-4 px-4 text-center font-semibold text-accent">
-                  PhotoSweeper
+                  Photiva
                 </th>
                 <th className="py-4 px-4 text-center font-medium text-muted">
                   Subscription Apps
@@ -66,7 +66,7 @@ export function ComparisonTable() {
                   <td className="py-3.5 pr-4 text-foreground">{row.feature}</td>
                   <td className="py-3.5 px-4 text-center">
                     <div className="flex justify-center">
-                      <CellValue value={row.photoSweeper} />
+                      <CellValue value={row.photiva} />
                     </div>
                   </td>
                   <td className="py-3.5 px-4 text-center">
