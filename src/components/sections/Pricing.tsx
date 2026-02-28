@@ -92,7 +92,7 @@ export function Pricing() {
                 <Button size="lg" className="w-full">
                   Free Download &amp; Scan
                 </Button>
-                <Button variant="secondary" size="lg" className="w-full">
+                <Button as="a" href="https://store.appiva.app/checkout/buy/9ccb153d-2370-4663-bef7-c9ba8658fac5" variant="secondary" size="lg" className="w-full">
                   Buy Now · $29.99
                 </Button>
               </div>
