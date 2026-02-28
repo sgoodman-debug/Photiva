@@ -121,7 +121,7 @@ export function CapabilityGrid() {
         </FadeIn>
         <FadeIn delay={0.2}>
           <p className="mt-4 text-muted max-w-2xl mx-auto">
-            Photiva packs a full suite of tools into one native Mac app — no plugins,
+            Photiva packs a full suite of tools into one native Mac app. No plugins,
             no subscriptions, no cloud dependencies.
           </p>
         </FadeIn>
@@ -133,8 +133,8 @@ export function CapabilityGrid() {
       >
         {capabilities.map((cap) => (
           <StaggerItem key={cap.title}>
-            <div className="group rounded-2xl border border-border bg-surface-elevated p-6 h-full transition-colors hover:border-accent/30">
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 text-accent transition-colors group-hover:bg-accent/15">
+            <div className="group rounded-2xl border border-border bg-surface-elevated p-6 h-full transition-colors hover:border-pink/30">
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 text-accent transition-colors group-hover:bg-pink/15">
                 {iconMap[cap.icon]}
               </div>
               <h3 className="font-display text-base font-bold tracking-[-0.02em] text-foreground mb-1.5">

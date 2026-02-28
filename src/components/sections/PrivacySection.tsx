@@ -72,7 +72,7 @@ export function PrivacySection() {
           <p className="mt-4 text-muted max-w-2xl mx-auto">
             Photiva processes everything locally. No cloud uploads. No servers. No accounts.
             No telemetry. Your library is analyzed entirely on-device using Apple&apos;s native
-            frameworks. We literally cannot see your photos — and that&apos;s by design.
+            frameworks. We literally cannot see your photos. That&apos;s by design.
           </p>
         </FadeIn>
       </div>
@@ -80,11 +80,11 @@ export function PrivacySection() {
       <StaggerChildren className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6" staggerDelay={0.08}>
         {privacyFeatures.map((item) => (
           <StaggerItem key={item.label}>
-            <div className="flex flex-col items-center gap-3 rounded-2xl border border-border bg-surface-elevated p-5 text-center">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent">
+            <div className="flex flex-col items-center justify-center gap-3 rounded-2xl border border-border bg-surface-elevated p-5 text-center h-[120px]">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent shrink-0">
                 {iconMap[item.icon]}
               </div>
-              <p className="text-xs font-medium text-muted">{item.label}</p>
+              <p className="text-xs font-medium text-muted leading-tight">{item.label}</p>
             </div>
           </StaggerItem>
         ))}

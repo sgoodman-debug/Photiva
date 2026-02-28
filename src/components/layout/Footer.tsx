@@ -1,8 +1,10 @@
+import Link from "next/link";
+
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-surface">
+    <footer className="border-t border-border bg-surface/50">
       <div className="mx-auto max-w-[1200px] px-5 sm:px-6 py-12">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 font-display font-bold text-lg tracking-[-0.02em] text-foreground mb-3">
@@ -27,18 +29,29 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-foreground mb-3">Product</h4>
             <ul className="space-y-2 text-sm text-muted">
-              <li><a href="#features" className="hover:text-foreground transition-colors">Features</a></li>
-              <li><a href="#pricing" className="hover:text-foreground transition-colors">Pricing</a></li>
-              <li><a href="#faq" className="hover:text-foreground transition-colors">FAQ</a></li>
+              <li><Link href="/#features" className="hover:text-foreground transition-colors">Features</Link></li>
+              <li><Link href="/#pricing" className="hover:text-foreground transition-colors">Pricing</Link></li>
+              <li><Link href="/#faq" className="hover:text-foreground transition-colors">FAQ</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold text-foreground mb-3">Support</h4>
+            <h4 className="text-sm font-semibold text-foreground mb-3">Guides</h4>
             <ul className="space-y-2 text-sm text-muted">
-              <li><a href="#" className="hover:text-foreground transition-colors">Documentation</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Contact</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a></li>
+              <li><Link href="/remove-duplicate-photos-mac" className="hover:text-foreground transition-colors">Remove duplicate photos on Mac</Link></li>
+              <li><Link href="/find-blurry-photos-mac" className="hover:text-foreground transition-colors">Find blurry photos on Mac</Link></li>
+              <li><Link href="/organize-apple-photos-library" className="hover:text-foreground transition-colors">Organize Apple Photos library</Link></li>
+              <li><Link href="/mac-photo-cleaner" className="hover:text-foreground transition-colors">Mac photo cleaner guide</Link></li>
+              <li><Link href="/photiva-vs-gemini" className="hover:text-foreground transition-colors">Photiva vs Gemini 2</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-semibold text-foreground mb-3">Legal</h4>
+            <ul className="space-y-2 text-sm text-muted">
+              <li><Link href="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="hover:text-foreground transition-colors">Terms &amp; Conditions</Link></li>
+              <li><a href="mailto:support@photiva.app" className="hover:text-foreground transition-colors">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -48,7 +61,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Photiva. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground">
-            Requires macOS 14 Sonoma or later. Universal app — Apple Silicon &amp; Intel.
+            Requires macOS 14 Sonoma or later. Universal app. Apple Silicon &amp; Intel.
           </p>
         </div>
       </div>

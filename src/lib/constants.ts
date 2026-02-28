@@ -27,45 +27,48 @@ export const features: Feature[] = [
     badge: "SMART CLEANUP",
     title: "One click. Every problem found.",
     description:
-      "Photiva scans your entire library and categorizes every issue — duplicates, blurry photos, screenshots, oversized videos, and Live Photo bloat. No manual sorting. No guessing. Just a clean report of exactly what's eating your storage.",
+      "Photiva scans your entire library and instantly groups everything that wastes space: duplicates, blurry shots, screenshots, oversized videos, and Live Photo data. No manual sorting. No guesswork. Just a clear breakdown of what can be cleaned safely.",
     bullets: [
-      "Finds exact duplicates using SHA-256 hash comparison",
-      "Detects visually similar photos using perceptual hashing and ML",
-      "Identifies blurry shots with Laplacian variance analysis",
-      "Groups burst shots and selects the best one automatically",
+      "Finds exact duplicates with SHA-256 matching",
+      "Groups visually similar photos",
+      "Flags blurry shots for review",
+      "Selects the best frame in bursts",
       "Separates screenshots, Live Photos, and large videos",
     ],
-    screenshotLabel: "Screenshot: Smart Cleanup results showing categorized issues with storage savings",
+    screenshotLabel: "Photiva Smart Cleanup results showing categorized issues with storage savings",
+    screenshot: "/screenshots/smart-cleanup.png",
   },
   {
     id: "duplicate-detection",
     badge: "DUPLICATE DETECTION",
     title: "Find every duplicate. Even the ones that look identical but aren't.",
     description:
-      "Three comparison modes catch everything — byte-perfect duplicates, visually similar shots with different crops or edits, and burst series taken seconds apart. Drag the matching threshold slider and watch results regroup in real time.",
+      "Three comparison modes catch everything: byte-perfect duplicates, visually similar shots with different crops or edits, and burst series taken seconds apart. Drag the matching threshold slider and watch results regroup in real time.",
     bullets: [
       "Exact file matching (SHA-256) and visual similarity (perceptual hash, color histogram, Vision ML)",
       "Time-based burst grouping for photos taken seconds apart",
-      "Live threshold adjustment — results update instantly",
+      "Live threshold adjustment with results updating instantly",
       "Side-by-side comparison mode for cross-folder detection",
       "Auto-selects the best shot in every group based on sharpness, exposure, and resolution",
     ],
-    screenshotLabel: "Screenshot: Duplicate comparison view with similarity threshold slider",
+    screenshotLabel: "Photiva Duplicate Detection results showing grouped duplicates with similarity percentage and Auto Mark",
+    screenshot: "/screenshots/duplicates.png",
   },
   {
     id: "organization",
     badge: "ORGANIZATION",
     title: "From chaos to a perfectly structured library.",
     description:
-      "Choose from 5 organization systems — or build your own with custom templates. Photiva reads EXIF data from every photo and sorts your library into a clean folder structure. Preview exactly what will happen before a single file moves.",
+      "Choose from 5 organization systems or build your own with custom templates. Photiva reads EXIF data from every photo and sorts your library into a clean folder structure. Preview exactly what will happen before a single file moves.",
     bullets: [
       "5 built-in systems: Chronological, Event-Based, Camera-First, Flat Daily, and Custom templates",
-      "Full EXIF metadata extraction — date, camera, GPS, lens info",
+      "Full EXIF metadata extraction: date, camera, GPS, lens info",
       "Event auto-detection using time gaps and GPS coordinates",
       "Live preview of the new folder structure before execution",
-      "Rollback support — undo any organization within 30 days",
+      "Rollback support: undo any organization within 30 days",
     ],
-    screenshotLabel: "Screenshot: Organization preview showing folder structure with folder icons",
+    screenshotLabel: "Photiva Organize scan results showing file breakdown, EXIF dates, camera info, and 43 detected events",
+    screenshot: "/screenshots/organize.png",
   },
   {
     id: "compression",
@@ -74,13 +77,14 @@ export const features: Feature[] = [
     description:
       "Compress photos and videos intelligently. Convert bloated JPEGs to HEIF at half the size. Downscale 48MP phone shots to a reasonable resolution. Shrink hour-long 4K videos to a fraction of their size. See estimated savings before you commit.",
     bullets: [
-      "HEIF conversion — JPEG/PNG to HEIF at ~50% smaller file size",
+      "HEIF conversion: JPEG/PNG to HEIF at ~50% smaller file size",
       "Quality reduction and resolution downscaling with aspect ratio preserved",
       "Video compression with 3 presets (1080p / 720p / 480p)",
-      "Live Photo to still conversion — remove hidden video data",
+      "Live Photo to still conversion to remove hidden video data",
       "Estimated savings shown before any operation",
     ],
-    screenshotLabel: "Screenshot: Compression options with estimated savings",
+    screenshotLabel: "Photiva Video Compression view showing 68 videos with preset options and estimated savings",
+    screenshot: "/screenshots/video-compression.png",
   },
   {
     id: "secure-vault",
@@ -94,20 +98,22 @@ export const features: Feature[] = [
       "Hidden from all cleanup and organization operations",
       "Export back to your library anytime",
     ],
-    screenshotLabel: "Screenshot: Vault interface with Touch ID prompt",
+    screenshotLabel: "Photiva Secure Vault showing encrypted photos with lock icons and Add Photos button",
+    screenshot: "/screenshots/secure-vault.png",
   },
   {
     id: "contact-cleanup",
     badge: "CONTACT CLEANUP",
     title: "Your contacts are a mess too.",
     description:
-      "Duplicate contacts pile up from email, iCloud, and phone syncs. Photiva finds them — by exact name, phone number, or fuzzy matching — and merges them intelligently. Emails, phone numbers, and names are combined. Duplicates are deleted.",
+      "Duplicate contacts pile up from email, iCloud, and phone syncs. Photiva finds them by exact name, phone number, or fuzzy matching and merges them intelligently. Emails, phone numbers, and names are combined. Duplicates are deleted.",
     bullets: [
       "Exact name and phone number matching across all sources",
-      "Fuzzy name matching — catches \"John Smith\" vs \"jon smith\" vs \"Jon Smith\"",
-      "Smart merge — combines all contact info, deletes duplicates",
+      "Fuzzy name matching that catches \"John Smith\" vs \"jon smith\" vs \"Jon Smith\"",
+      "Smart merge: combines all contact info, deletes duplicates",
     ],
-    screenshotLabel: "Screenshot: Contact cleanup showing duplicate groups",
+    screenshotLabel: "Photiva Contact Cleanup showing duplicate contacts grouped by name and phone number with Merge and Delete options",
+    screenshot: "/screenshots/contact-cleanup.png",
   },
 ];
 
@@ -133,17 +139,17 @@ export const steps: Step[] = [
 ];
 
 export const comparisonRows: ComparisonRow[] = [
-  { feature: "One-time purchase", photiva: true, subscriptionApps: false, freeTools: true },
-  { feature: "Duplicate detection (exact + visual)", photiva: true, subscriptionApps: "Partial", freeTools: "Basic" },
-  { feature: "Blurry photo detection", photiva: true, subscriptionApps: false, freeTools: false },
-  { feature: "Smart organization (5 systems)", photiva: true, subscriptionApps: false, freeTools: false },
-  { feature: "Event auto-detection", photiva: true, subscriptionApps: false, freeTools: false },
-  { feature: "Secure encrypted vault", photiva: true, subscriptionApps: false, freeTools: false },
-  { feature: "Photo & video compression", photiva: true, subscriptionApps: "Partial", freeTools: false },
-  { feature: "Contact cleanup", photiva: true, subscriptionApps: false, freeTools: false },
-  { feature: "100% on-device processing", photiva: true, subscriptionApps: false, freeTools: "Varies" },
-  { feature: "Rollback / undo", photiva: true, subscriptionApps: false, freeTools: false },
-  { feature: "RAW + sidecar support", photiva: true, subscriptionApps: "Partial", freeTools: false },
+  { feature: "One-time purchase", photiva: "Yes", subscriptionApps: "No", freeTools: "Yes" },
+  { feature: "Duplicate detection (exact + visual)", photiva: "Yes", subscriptionApps: "Partial", freeTools: "No" },
+  { feature: "Blurry photo detection", photiva: "Yes", subscriptionApps: "No", freeTools: "No" },
+  { feature: "Smart organization (5 systems)", photiva: "Yes", subscriptionApps: "No", freeTools: "No" },
+  { feature: "Event auto-detection", photiva: "Yes", subscriptionApps: "No", freeTools: "No" },
+  { feature: "Secure encrypted vault", photiva: "Yes", subscriptionApps: "No", freeTools: "No" },
+  { feature: "Photo & video compression", photiva: "Yes", subscriptionApps: "Partial", freeTools: "No" },
+  { feature: "Contact cleanup", photiva: "Yes", subscriptionApps: "No", freeTools: "No" },
+  { feature: "100% on-device processing", photiva: "Yes", subscriptionApps: "No", freeTools: "Partial" },
+  { feature: "Rollback / undo", photiva: "Yes", subscriptionApps: "No", freeTools: "No" },
+  { feature: "RAW + sidecar support", photiva: "Yes", subscriptionApps: "Partial", freeTools: "No" },
 ];
 
 export const testimonials: Testimonial[] = [
@@ -155,7 +161,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "10 years of family photos finally organized into folders I can actually browse. My wife thinks I spent the whole weekend doing it — took me 20 minutes.",
+      "10 years of family photos finally organized into folders I can actually browse. My wife thinks I spent the whole weekend doing it. Took me 20 minutes.",
     name: "Sarah Mitchell",
     role: "Parent of three",
   },
@@ -191,12 +197,12 @@ export const faqs: FAQ[] = [
   {
     question: "How is this different from Gemini or CleanMyMac?",
     answer:
-      "Photiva combines duplicate detection, smart organization, compression, vault encryption, and contact cleanup in one app — with no subscription. Most alternatives only cover one or two of these and charge you every year.",
+      "Photiva combines duplicate detection, smart organization, compression, vault encryption, and contact cleanup in one app with no subscription. Most alternatives only cover one or two of these and charge you every year.",
   },
   {
-    question: "Is there a free trial?",
+    question: "Is Photiva free to use?",
     answer:
-      "Yes. Download and try the full app free with no time limit. Purchase to unlock unlimited cleanup operations.",
+      "You can download Photiva and scan your entire library for free. You will see all detected duplicates, blurry photos, storage savings, and organization previews before purchasing. A one-time payment unlocks cleanup and full feature access.",
   },
 ];
 
@@ -227,97 +233,98 @@ export const capabilities: CapabilityItem[] = [
     icon: "wand",
     title: "Auto Mark",
     description:
-      "Intuitive adjustable rules help determine which photo to keep in each group of duplicates.",
+      "Adjustable rules help you keep the best photo in each group.",
   },
   {
     icon: "image-search",
     title: "Similar Photos",
     description:
-      "Powerful search engine isolates groups of similar photos with an adjustable similarity threshold.",
+      "Find related shots with an adjustable similarity threshold.",
   },
   {
     icon: "timer",
     title: "Series of Shots",
     description:
-      "Set a maximum time gap between photos to find burst series and keep only the best shots.",
+      "Set a time gap to group bursts and keep the strongest shots.",
   },
   {
     icon: "lock",
     title: "Auto Lock",
     description:
-      "Keeps already-sorted photos safe. Locked photos are used for comparison but can't be marked for removal.",
+      "Protect already-sorted photos from accidental marking or removal.",
   },
   {
     icon: "film",
     title: "Movies",
     description:
-      "Supports various video formats including AVI, MKV, and WMV — even those macOS doesn't support natively.",
+      "Works with many video formats, including AVI, MKV, and WMV.",
   },
   {
     icon: "edit",
     title: "Edited Photos",
     description:
-      "Finds resized, rotated, and filter-enhanced photos from apps like Photoshop, Pixelmator, and more.",
+      "Detects resized, rotated, and edited versions from popular apps.",
   },
   {
     icon: "layout",
     title: "Photo Browser",
     description:
-      "A modern browser with EXIF Info Panel, Movie Preview, Quick Look, Path Bar, and more.",
+      "Browse with EXIF details, movie preview, Quick Look, and path view.",
   },
   {
     icon: "type",
     title: "Batch Renaming",
     description:
-      "Bulk rename files while copying or moving them to another folder for better organization.",
+      "Rename files in bulk while copying or moving for cleaner organization.",
   },
   {
     icon: "trash-safe",
     title: "Safe Removal",
     description:
-      "Never deletes files permanently. Everything goes to Trash so you can always restore if needed.",
+      "Moves files to Trash so you can restore anything if needed.",
   },
   {
     icon: "file-image",
     title: "Image Formats",
     description:
-      "Supports all popular formats including RAW, HEIC, PDF, DNG, and WebP.",
+      "Supports popular formats including RAW, HEIC, PDF, DNG, and WebP.",
   },
   {
     icon: "columns",
     title: "Results Sorting",
     description:
-      "Three review modes — One by One, Face-to-Face, and All in One — with single-click marking.",
+      "Review One by One, Face-to-Face, or All in One with one-click marking.",
   },
   {
     icon: "sliders",
     title: "Powerful Settings",
     description:
-      "Find duplicates, similar photos, or series of shots with precise control over search parameters.",
+      "Tune search settings for similar shots and burst groups.",
   },
   {
     icon: "zap",
     title: "Blazing Fast",
     description:
-      "64-bit, ARM, and multicore optimized to reveal the real power of your Mac.",
+      "Optimized for 64-bit, Apple Silicon, and multicore performance.",
   },
   {
     icon: "monitor",
     title: "macOS Native",
     description:
-      "Takes full advantage of the latest macOS features with a beautiful native interface.",
+      "Built for modern macOS with a clean native interface.",
   },
   {
     icon: "sparkles",
     title: "And More",
     description:
-      "A full suite of enhancements and features throughout the entire app, with regular updates.",
+      "A complete toolset with regular updates and refinements.",
   },
 ];
 
 export const navLinks = [
-  { label: "Features", href: "#features" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Features", href: "/#features" },
+  { label: "How It Works", href: "/#how-it-works" },
+  { label: "Guides", href: "/guides" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "FAQ", href: "/#faq" },
 ];

@@ -9,9 +9,9 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantClasses = {
   primary:
-    "bg-accent text-accent-foreground hover:bg-accent-hover shadow-lg shadow-accent/20 hover:shadow-accent/30",
+    "bg-cta text-cta-foreground hover:bg-cta-hover shadow-lg shadow-cta/25 hover:shadow-cta/40",
   secondary:
-    "border border-border text-foreground hover:bg-surface-elevated hover:border-muted-foreground/30",
+    "border-2 border-foreground/20 text-foreground hover:bg-foreground/5 hover:border-foreground/40",
   ghost:
     "text-muted hover:text-foreground hover:bg-surface",
 };

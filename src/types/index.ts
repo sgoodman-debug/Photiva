@@ -5,6 +5,7 @@ export interface Feature {
   description: string;
   bullets: string[];
   screenshotLabel: string;
+  screenshot?: string;
 }
 
 export interface FAQ {
@@ -20,9 +21,9 @@ export interface Testimonial {
 
 export interface ComparisonRow {
   feature: string;
-  photiva: string | boolean;
-  subscriptionApps: string | boolean;
-  freeTools: string | boolean;
+  photiva: "Yes" | "Partial" | "No";
+  subscriptionApps: "Yes" | "Partial" | "No";
+  freeTools: "Yes" | "Partial" | "No";
 }
 
 export interface ProblemCard {

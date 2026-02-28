@@ -14,38 +14,31 @@
   --color-accent-hover: var(--accent-hover);
   --color-accent-foreground: var(--accent-fg);
   --color-accent-muted: var(--accent-muted);
+  --color-cta: var(--cta);
+  --color-cta-hover: var(--cta-hover);
+  --color-cta-foreground: var(--cta-fg);
+  --color-pink: var(--pink);
   --font-sans: var(--font-inter), "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-display: var(--font-jakarta), "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display), "Outfit", ui-sans-serif, system-ui, sans-serif;
 }
 
-/* ─── Light palette ─── */
+/* ─── Dark palette (deep purple) ─── */
 :root {
-  --bg: #ffffff;
-  --fg: #111114;
-  --muted: #5c5c6d;
-  --muted-fg: #9394a1;
-  --surface: #f6f6f8;
-  --surface-elevated: #ffffff;
-  --border-color: #e3e3e8;
-  --accent: #0c8ce9;
-  --accent-hover: #0a72c3;
-  --accent-fg: #ffffff;
-  --accent-muted: #0c8ce926;
-}
-
-/* ─── Dark palette ─── */
-[data-theme="dark"] {
-  --bg: #0b0b0f;
-  --fg: #f0f0f3;
-  --muted: #9b9bab;
-  --muted-fg: #606070;
-  --surface: #141418;
-  --surface-elevated: #1c1c22;
-  --border-color: #2a2a33;
-  --accent: #3b9eff;
-  --accent-hover: #6bb7ff;
-  --accent-fg: #0b0b0f;
-  --accent-muted: #3b9eff1a;
+  --bg: #1a1030;
+  --fg: #f0eef5;
+  --muted: #a8a3be;
+  --muted-fg: #6e6889;
+  --surface: #221844;
+  --surface-elevated: #2a1f50;
+  --border-color: #3d3366;
+  --accent: #a78bfa;
+  --accent-hover: #c4b5fc;
+  --accent-fg: #1a1030;
+  --accent-muted: #a78bfa1a;
+  --cta: #2ecc71;
+  --cta-hover: #3ddc84;
+  --cta-fg: #ffffff;
+  --pink: #fd79a8;
 }
 
 * {
@@ -92,8 +85,19 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, var(--accent), #a78bfa);
+  background: linear-gradient(135deg, var(--accent), var(--pink));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+.bg-gradient-hero {
+  background: radial-gradient(ellipse 80% 60% at 50% -10%, var(--accent-muted), transparent),
+              radial-gradient(ellipse 60% 40% at 80% 50%, #fd79a815, transparent),
+              var(--bg);
+}
+
+.bg-gradient-section {
+  background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
+}
+

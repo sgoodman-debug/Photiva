@@ -1,65 +1,73 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
 
-const inter = Inter({
+const inter = localFont({
+  src: "./fonts/inter-latin.woff2",
   variable: "--font-inter",
-  subsets: ["latin"],
   display: "swap",
 });
 
-const jakarta = Plus_Jakarta_Sans({
-  variable: "--font-jakarta",
-  subsets: ["latin"],
+const outfit = localFont({
+  src: "./fonts/outfit-latin.woff2",
+  variable: "--font-display",
   display: "swap",
-  weight: ["500", "600", "700", "800"],
+  weight: "400 800",
 });
 
 export const metadata: Metadata = {
-  title: "Photiva — The Most Comprehensive Photo Library Cleaner for Mac",
+  metadataBase: new URL("https://photiva.app"),
+  title: {
+    default: "Photiva | Mac Photo Cleaner",
+    template: "%s | Photiva",
+  },
   description:
-    "Remove duplicates, organize your library, compress photos & videos, and protect sensitive images — all on-device. One-time purchase. No subscription.",
+    "Photiva is a macOS photo cleaner for duplicates, blurry photos, and Apple Photos organization with private on-device processing.",
   keywords: [
     "photo cleaner mac",
-    "duplicate photo finder",
-    "photo organizer mac",
-    "photo library cleanup",
-    "macos photo app",
-    "remove duplicate photos",
+    "duplicate photo finder mac",
+    "find blurry photos mac",
+    "organize apple photos library",
+    "mac photo cleaner",
+    "photiva vs gemini 2",
   ],
   openGraph: {
-    title: "Photiva — Clean Up Your Mac Photo Library",
+    title: "Photiva | Mac Photo Cleaner",
     description:
-      "Remove duplicates, organize your library, compress photos & videos — all on-device. One-time purchase.",
+      "Clean duplicates, blurry shots, and similar photos. Organize Apple Photos privately on-device.",
     url: "https://photiva.app",
     siteName: "Photiva",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Photiva app dashboard" }],
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Photiva macOS photo cleaner interface",
+      },
+    ],
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Photiva — Clean Up Your Mac Photo Library",
+    title: "Photiva | Mac Photo Cleaner",
     description:
-      "Remove duplicates, organize your library, compress photos & videos — all on-device. One-time purchase.",
+      "Clean duplicates, blurry shots, and similar photos. Organize Apple Photos privately on-device.",
     images: ["/og-image.png"],
   },
-  robots: { index: true, follow: true },
-};
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  name: "Photiva",
-  operatingSystem: "macOS",
-  applicationCategory: "UtilitiesApplication",
-  description:
-    "The most comprehensive photo library cleaner for Mac. Remove duplicates, organize, compress, and protect your photos.",
-  offers: {
-    "@type": "Offer",
-    price: "29.99",
-    priceCurrency: "USD",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -70,14 +78,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
-      <body className={`${inter.variable} ${jakarta.variable} font-sans antialiased`}>
-        <ThemeProvider>{children}</ThemeProvider>
+      <body className={`${inter.variable} ${outfit.variable} font-sans antialiased`}>
+        <ThemeProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

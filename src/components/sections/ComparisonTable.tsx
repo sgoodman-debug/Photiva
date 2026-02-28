@@ -4,27 +4,26 @@ import { Section } from "@/components/layout/Section";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { comparisonRows } from "@/lib/constants";
 
-function CellValue({ value }: { value: string | boolean }) {
-  if (value === true) {
+function CellValue({ value, emphasize = false }: { value: "Yes" | "Partial" | "No"; emphasize?: boolean }) {
+  if (value === "Yes") {
     return (
-      <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-accent/15 text-accent">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-          <polyline points="20 6 9 17 4 12" />
-        </svg>
+      <span className={`inline-flex rounded-full px-2.5 py-1 text-xs font-semibold ${emphasize ? "bg-accent/15 text-accent" : "bg-emerald-500/10 text-emerald-400"}`}>
+        Yes
       </span>
     );
   }
-  if (value === false) {
+  if (value === "Partial") {
     return (
-      <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-muted-foreground/10 text-muted-foreground">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
-          <line x1="18" y1="6" x2="6" y2="18" />
-          <line x1="6" y1="6" x2="18" y2="18" />
-        </svg>
+      <span className="inline-flex rounded-full px-2.5 py-1 text-xs font-semibold bg-amber-500/10 text-amber-400">
+        Partial
       </span>
     );
   }
-  return <span className="text-xs text-muted-foreground">{value}</span>;
+  return (
+    <span className="inline-flex rounded-full px-2.5 py-1 text-xs font-semibold bg-muted-foreground/10 text-muted-foreground">
+      No
+    </span>
+  );
 }
 
 export function ComparisonTable() {
@@ -38,7 +37,7 @@ export function ComparisonTable() {
         </FadeIn>
         <FadeIn delay={0.1}>
           <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-[-0.03em] text-foreground">
-            Photiva vs. the rest
+            Photiva vs Subscription Apps and Free Tools
           </h2>
         </FadeIn>
       </div>
@@ -66,7 +65,7 @@ export function ComparisonTable() {
                   <td className="py-3.5 pr-4 text-foreground">{row.feature}</td>
                   <td className="py-3.5 px-4 text-center">
                     <div className="flex justify-center">
-                      <CellValue value={row.photiva} />
+                      <CellValue value={row.photiva} emphasize />
                     </div>
                   </td>
                   <td className="py-3.5 px-4 text-center">

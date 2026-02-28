@@ -1,13 +1,14 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useId, useState } from "react";
+import { motion } from "framer-motion";
 import { Section } from "@/components/layout/Section";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { faqs } from "@/lib/constants";
 
 function FAQItem({ question, answer }: { question: string; answer: string }) {
   const [open, setOpen] = useState(false);
+  const answerId = useId();
 
   return (
     <div className="border-b border-border">
@@ -15,8 +16,9 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
         onClick={() => setOpen(!open)}
         className="flex w-full items-center justify-between py-5 text-left cursor-pointer group"
         aria-expanded={open}
+        aria-controls={answerId}
       >
-        <span className="text-base font-medium text-foreground group-hover:text-accent transition-colors pr-4">
+        <span className="text-base font-medium text-foreground group-hover:text-pink transition-colors pr-4">
           {question}
         </span>
         <motion.svg
@@ -34,21 +36,21 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
           <polyline points="6 9 12 15 18 9" />
         </motion.svg>
       </button>
-      <AnimatePresence initial={false}>
-        {open && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="overflow-hidden"
-          >
-            <p className="pb-5 text-sm text-muted leading-relaxed pr-8">
-              {answer}
-            </p>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <motion.div
+        id={answerId}
+        initial={false}
+        animate={{
+          maxHeight: open ? 240 : 0,
+          opacity: open ? 1 : 0.72,
+        }}
+        transition={{ duration: 0.25, ease: "easeInOut" }}
+        className="overflow-hidden"
+        aria-hidden={!open}
+      >
+        <p className="pb-5 text-sm text-muted leading-relaxed pr-8">
+          {answer}
+        </p>
+      </motion.div>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Section } from "@/components/layout/Section";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { Badge } from "@/components/ui/Badge";
@@ -56,30 +57,43 @@ export function FeatureSection({ feature, reversed = false }: FeatureSectionProp
           </FadeIn>
         </div>
 
-        {/* Screenshot placeholder */}
+        {/* Screenshot */}
         <div style={reversed ? { direction: "ltr" } : undefined}>
           <FadeIn direction={reversed ? "left" : "right"}>
-            <div className="aspect-[4/3] rounded-2xl border border-border bg-surface-elevated overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent" />
-              <div className="flex h-full flex-col items-center justify-center gap-3 p-8">
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  className="text-muted-foreground/40"
-                >
-                  <rect x="3" y="3" width="18" height="18" rx="2" />
-                  <circle cx="8.5" cy="8.5" r="1.5" />
-                  <polyline points="21 15 16 10 5 21" />
-                </svg>
-                <p className="text-xs text-muted-foreground/40 text-center max-w-[200px]">
-                  {feature.screenshotLabel}
-                </p>
+            {feature.screenshot ? (
+              <div className="rounded-2xl border border-border/60 overflow-hidden shadow-2xl shadow-black/20">
+                <Image
+                  src={feature.screenshot}
+                  alt={feature.screenshotLabel}
+                  width={1280}
+                  height={800}
+                  className="w-full h-auto"
+                  quality={90}
+                />
               </div>
-            </div>
+            ) : (
+              <div className="aspect-[4/3] rounded-2xl border border-border/60 bg-surface-elevated overflow-hidden backdrop-blur-sm">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-surface to-pink/5" />
+                <div className="flex h-full flex-col items-center justify-center gap-3 p-8">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    className="text-muted-foreground/40"
+                  >
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <polyline points="21 15 16 10 5 21" />
+                  </svg>
+                  <p className="text-xs text-muted-foreground/40 text-center max-w-[200px]">
+                    {feature.screenshotLabel}
+                  </p>
+                </div>
+              </div>
+            )}
           </FadeIn>
         </div>
       </div>

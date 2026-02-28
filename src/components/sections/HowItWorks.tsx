@@ -43,10 +43,10 @@ export function HowItWorks() {
         {steps.map((step, i) => (
           <StaggerItem key={step.number}>
             <div className="text-center">
-              <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-accent/10 text-accent">
+              <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-accent/15 text-accent">
                 {stepIcons[i]}
               </div>
-              <div className="mb-2 text-xs font-bold text-accent uppercase tracking-widest">
+              <div className="mb-2 text-xs font-bold text-pink uppercase tracking-widest">
                 Step {step.number}
               </div>
               <h3 className="font-display text-xl font-bold tracking-[-0.02em] text-foreground mb-2">

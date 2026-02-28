@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useScrollProgress } from "@/hooks/useScrollProgress";
-import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { Button } from "@/components/ui/Button";
 import { navLinks } from "@/lib/constants";
 
@@ -20,13 +20,13 @@ export function Navbar() {
     >
       {/* Scroll progress bar */}
       <div
-        className="absolute bottom-0 left-0 h-[2px] bg-accent transition-all duration-150"
+        className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-accent to-pink transition-all duration-150"
         style={{ width: `${progress * 100}%` }}
       />
 
       <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-5 sm:px-6 h-16">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 font-display font-bold text-lg tracking-[-0.02em] text-foreground">
+        <Link href="/" className="flex items-center gap-2 font-display font-bold text-lg tracking-[-0.02em] text-foreground">
           <svg width="28" height="28" viewBox="0 0 32 32" fill="none" className="text-accent">
             <rect width="32" height="32" rx="8" fill="currentColor" fillOpacity="0.15" />
             <path
@@ -38,7 +38,7 @@ export function Navbar() {
             <circle cx="16" cy="16" r="2" fill="currentColor" />
           </svg>
           Photiva
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
@@ -54,15 +54,13 @@ export function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <ThemeToggle />
-          <Button as="a" href="#pricing" size="sm">
-            Download Free Trial
+          <Button as="a" href="/#pricing" size="sm">
+            Free Download &amp; Scan
           </Button>
         </div>
 
         {/* Mobile hamburger */}
         <div className="flex md:hidden items-center gap-2">
-          <ThemeToggle />
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="flex h-9 w-9 items-center justify-center rounded-lg text-muted hover:text-foreground hover:bg-surface transition-colors cursor-pointer"
@@ -101,8 +99,8 @@ export function Navbar() {
               </a>
             ))}
             <div className="pt-2">
-              <Button as="a" href="#pricing" size="sm" className="w-full">
-                Download Free Trial
+              <Button as="a" href="/#pricing" size="sm" className="w-full">
+                Free Download &amp; Scan
               </Button>
             </div>
           </div>

@@ -51,7 +51,7 @@ export function ProblemSection() {
         {problemCards.map((card) => (
           <StaggerItem key={card.title}>
             <div className="rounded-2xl border border-border bg-surface-elevated p-7 h-full">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-pink/10 text-pink">
                 {icons[card.icon]}
               </div>
               <h3 className="font-display text-lg font-bold tracking-[-0.02em] text-foreground mb-2">{card.title}</h3>
@@ -63,7 +63,7 @@ export function ProblemSection() {
 
       <FadeIn delay={0.4}>
         <p className="text-center mt-12 text-lg text-muted">
-          What if your Mac could fix all of this —{" "}
+          What if your Mac fixed all of this{" "}
           <span className="text-foreground font-medium">automatically?</span>
         </p>
       </FadeIn>

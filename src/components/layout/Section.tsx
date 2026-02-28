@@ -18,7 +18,7 @@ export function Section({
   background = "default",
 }: SectionProps) {
   return (
-    <section id={id} className={`py-20 md:py-28 ${bgClasses[background]} ${className}`}>
+    <section id={id} className={`py-14 md:py-20 ${bgClasses[background]} ${className}`}>
       <div className="mx-auto max-w-[1200px] px-5 sm:px-6">{children}</div>
     </section>
   );

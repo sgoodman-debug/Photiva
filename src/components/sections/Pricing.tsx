@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 
 const included = [
-  "Smart Cleanup — one-click library analysis",
+  "Smart Cleanup: one-click library analysis",
   "Duplicate & similar photo detection",
   "5 organization systems + custom templates",
   "Photo & video compression",
@@ -33,16 +33,17 @@ export function Pricing() {
         </FadeIn>
         <FadeIn delay={0.2}>
           <p className="mt-4 text-muted max-w-lg mx-auto">
-            No subscriptions. No recurring fees. Pay once, own it for life.
+            Download and scan your entire library for free.
+            Purchase once to unlock cleanup, organization, compression, vault, and contact tools.
           </p>
         </FadeIn>
       </div>
 
       <FadeIn delay={0.2}>
         <div className="mx-auto max-w-lg">
-          <div className="rounded-2xl border-2 border-accent/30 bg-surface-elevated p-8 md:p-10 relative overflow-hidden">
+          <div className="rounded-2xl border-2 border-accent/40 bg-surface-elevated p-8 md:p-10 relative overflow-hidden">
             {/* Glow */}
-            <div className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-accent/10 blur-[80px]" />
+            <div className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-accent/15 blur-[80px]" />
 
             <div className="relative">
               {/* Subscription anchor */}
@@ -56,9 +57,10 @@ export function Pricing() {
 
               {/* Price */}
               <div className="flex items-baseline gap-2 mb-1">
-                <span className="font-display text-5xl font-extrabold tracking-[-0.03em] text-foreground">$29.99</span>
+                <span className="font-display text-5xl font-extrabold tracking-[-0.03em] text-accent">$29.99</span>
                 <Badge variant="accent">One-time</Badge>
               </div>
+              <p className="text-sm text-muted mb-2">Full scan is free. Cleanup requires purchase.</p>
               <p className="text-sm text-muted mb-8">Pay once. Use forever. All features included.</p>
 
               {/* Feature list */}
@@ -88,10 +90,10 @@ export function Pricing() {
               {/* CTAs */}
               <div className="flex flex-col gap-3">
                 <Button size="lg" className="w-full">
-                  Download Free Trial
+                  Free Download &amp; Scan
                 </Button>
                 <Button variant="secondary" size="lg" className="w-full">
-                  Buy Now — $29.99
+                  Buy Now · $29.99
                 </Button>
               </div>
 
@@ -104,7 +106,7 @@ export function Pricing() {
               </div>
 
               <p className="mt-3 text-center text-xs text-muted-foreground">
-                Requires macOS 14 Sonoma or later. Universal app — runs natively on Apple Silicon and Intel.
+                Requires macOS 14 Sonoma or later. Universal app, runs natively on Apple Silicon and Intel.
               </p>
             </div>
           </div>

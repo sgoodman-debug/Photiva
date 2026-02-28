@@ -6,7 +6,7 @@ interface BadgeProps {
 
 const variantClasses = {
   default: "bg-surface text-muted border border-border",
-  accent: "bg-accent/10 text-accent border border-accent/20",
+  accent: "bg-accent/15 text-accent border border-accent/20",
   outline: "border border-border text-muted-foreground",
 };
 
