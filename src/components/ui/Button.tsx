@@ -1,4 +1,5 @@
-import { type ButtonHTMLAttributes } from "react";
+import { type ButtonHTMLAttributes, type MouseEvent } from "react";
+import posthog from "posthog-js";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "ghost";
@@ -33,16 +34,25 @@ export function Button({
 }: ButtonProps) {
   const classes = `inline-flex items-center justify-center gap-2 rounded-xl font-display font-semibold tracking-[-0.01em] transition-all duration-200 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 
+  function trackClick(e: MouseEvent) {
+    const label = (e.currentTarget as HTMLElement).textContent?.trim() || "";
+    posthog.capture("cta_clicked", {
+      label,
+      href: href || undefined,
+      variant,
+    });
+  }
+
   if (as === "a" && href) {
     return (
-      <a href={href} className={classes}>
+      <a href={href} className={classes} onClick={trackClick}>
         {children}
       </a>
     );
   }
 
   return (
-    <button className={classes} {...props}>
+    <button className={classes} onClick={(e) => { trackClick(e); props.onClick?.(e); }} {...props}>
       {children}
     </button>
   );
