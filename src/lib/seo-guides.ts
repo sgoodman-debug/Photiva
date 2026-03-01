@@ -868,12 +868,12 @@ export function buildGuideMetadata(guide: GuideData): Metadata {
     title: guide.title,
     description: guide.description,
     alternates: {
-      canonical: `/${guide.slug}`,
+      canonical: `/guides/${guide.slug}`,
     },
     openGraph: {
       title: guide.title,
       description: guide.description,
-      url: `${SITE_URL}/${guide.slug}`,
+      url: `${SITE_URL}/guides/${guide.slug}`,
       siteName: "Photiva",
       images: [
         {
@@ -896,7 +896,7 @@ export function buildGuideMetadata(guide: GuideData): Metadata {
 }
 
 export function buildGuideSchema(guide: GuideData) {
-  const pageUrl = `${SITE_URL}/${guide.slug}`;
+  const pageUrl = `${SITE_URL}/guides/${guide.slug}`;
 
   const softwareApplication = {
     "@context": "https://schema.org",

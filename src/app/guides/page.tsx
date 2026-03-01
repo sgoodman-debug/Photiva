@@ -4,27 +4,27 @@ import { Section } from "@/components/layout/Section";
 
 const guides = [
   {
-    href: "/remove-duplicate-photos-mac",
+    href: "/guides/remove-duplicate-photos-mac",
     title: "Remove Duplicate Photos on Mac",
     description: "Learn a safe workflow for finding exact and similar duplicates before deleting anything.",
   },
   {
-    href: "/find-blurry-photos-mac",
+    href: "/guides/find-blurry-photos-mac",
     title: "Find Blurry Photos on Mac",
     description: "Use quality-focused review steps to remove soft shots while keeping the best moments.",
   },
   {
-    href: "/organize-apple-photos-library",
+    href: "/guides/organize-apple-photos-library",
     title: "Organize Apple Photos Library",
     description: "Build a simple system for events, dates, and recurring cleanup that stays manageable.",
   },
   {
-    href: "/mac-photo-cleaner",
+    href: "/guides/mac-photo-cleaner",
     title: "Mac Photo Cleaner Guide",
     description: "Compare what matters in a cleaner: accuracy, privacy, rollback safety, and workflow coverage.",
   },
   {
-    href: "/photiva-vs-gemini",
+    href: "/guides/photiva-vs-gemini",
     title: "Photiva vs Gemini 2",
     description: "See how duplicate-only cleanup compares to a complete cleanup and organization workflow.",
   },

@@ -142,7 +142,7 @@ export function GuidePage({ slug }: GuidePageProps) {
         <ul className="mt-5 text-muted list-disc list-inside space-y-2">
           {relatedLinks.map((item) => (
             <li key={item}>
-              <Link className="text-accent hover:underline" href={`/${item}`}>
+              <Link className="text-accent hover:underline" href={`/guides/${item}`}>
                 {guideLabels[item]}
               </Link>
             </li>

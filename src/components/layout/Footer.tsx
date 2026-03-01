@@ -38,11 +38,11 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-foreground mb-3">Guides</h4>
             <ul className="space-y-2 text-sm text-muted">
-              <li><Link href="/remove-duplicate-photos-mac" className="hover:text-foreground transition-colors">Remove duplicate photos on Mac</Link></li>
-              <li><Link href="/find-blurry-photos-mac" className="hover:text-foreground transition-colors">Find blurry photos on Mac</Link></li>
-              <li><Link href="/organize-apple-photos-library" className="hover:text-foreground transition-colors">Organize Apple Photos library</Link></li>
-              <li><Link href="/mac-photo-cleaner" className="hover:text-foreground transition-colors">Mac photo cleaner guide</Link></li>
-              <li><Link href="/photiva-vs-gemini" className="hover:text-foreground transition-colors">Photiva vs Gemini 2</Link></li>
+              <li><Link href="/guides/remove-duplicate-photos-mac" className="hover:text-foreground transition-colors">Remove duplicate photos on Mac</Link></li>
+              <li><Link href="/guides/find-blurry-photos-mac" className="hover:text-foreground transition-colors">Find blurry photos on Mac</Link></li>
+              <li><Link href="/guides/organize-apple-photos-library" className="hover:text-foreground transition-colors">Organize Apple Photos library</Link></li>
+              <li><Link href="/guides/mac-photo-cleaner" className="hover:text-foreground transition-colors">Mac photo cleaner guide</Link></li>
+              <li><Link href="/guides/photiva-vs-gemini" className="hover:text-foreground transition-colors">Photiva vs Gemini 2</Link></li>
             </ul>
           </div>
 
