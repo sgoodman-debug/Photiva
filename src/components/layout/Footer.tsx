@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function Footer() {
@@ -8,16 +9,7 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 font-display font-bold text-lg tracking-[-0.02em] text-foreground mb-3">
-              <svg width="24" height="24" viewBox="0 0 32 32" fill="none" className="text-accent">
-                <rect width="32" height="32" rx="8" fill="currentColor" fillOpacity="0.15" />
-                <path
-                  d="M10 16C10 12.6863 12.6863 10 16 10C19.3137 10 22 12.6863 22 16C22 19.3137 19.3137 22 16 22"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                />
-                <circle cx="16" cy="16" r="2" fill="currentColor" />
-              </svg>
+              <Image src="/app-icon.png" alt="Photiva" width={28} height={28} className="rounded-lg" />
               Photiva
             </div>
             <p className="text-sm text-muted max-w-sm">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useScrollProgress } from "@/hooks/useScrollProgress";
 import { Button } from "@/components/ui/Button";
@@ -27,16 +28,7 @@ export function Navbar() {
       <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-5 sm:px-6 h-16">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 font-display font-bold text-lg tracking-[-0.02em] text-foreground">
-          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" className="text-accent">
-            <rect width="32" height="32" rx="8" fill="currentColor" fillOpacity="0.15" />
-            <path
-              d="M10 16C10 12.6863 12.6863 10 16 10C19.3137 10 22 12.6863 22 16C22 19.3137 19.3137 22 16 22"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-            />
-            <circle cx="16" cy="16" r="2" fill="currentColor" />
-          </svg>
+          <Image src="/app-icon.png" alt="Photiva" width={32} height={32} className="rounded-lg" />
           Photiva
         </Link>
 
