@@ -236,7 +236,7 @@ export function Hero() {
 
             <FadeIn delay={0.4}>
               <div className="mt-10 flex flex-col sm:flex-row gap-3">
-                <Button as="a" href="/#pricing" size="lg">
+                <Button as="a" href="/download" size="lg">
                   Free Download &amp; Scan
                 </Button>
                 <Button as="a" href="/#how-it-works" variant="secondary" size="lg">

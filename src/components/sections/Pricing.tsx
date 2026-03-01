@@ -89,7 +89,7 @@ export function Pricing() {
 
               {/* CTAs */}
               <div className="flex flex-col gap-3">
-                <Button size="lg" className="w-full">
+                <Button as="a" href="/download" size="lg" className="w-full">
                   Free Download &amp; Scan
                 </Button>
                 <Button as="a" href="https://store.appiva.app/checkout/buy/9ccb153d-2370-4663-bef7-c9ba8658fac5" variant="secondary" size="lg" className="w-full">

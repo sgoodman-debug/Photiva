@@ -46,7 +46,7 @@ export function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <Button as="a" href="/#pricing" size="sm">
+          <Button as="a" href="/download" size="sm">
             Free Download &amp; Scan
           </Button>
         </div>
@@ -91,7 +91,7 @@ export function Navbar() {
               </a>
             ))}
             <div className="pt-2">
-              <Button as="a" href="/#pricing" size="sm" className="w-full">
+              <Button as="a" href="/download" size="sm" className="w-full">
                 Free Download &amp; Scan
               </Button>
             </div>
