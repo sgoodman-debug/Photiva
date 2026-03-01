@@ -46,4 +46,3 @@ next-env.d.ts
 # screenshots
 *.png
 !public/**/*.png
-!src/app/icon.png
