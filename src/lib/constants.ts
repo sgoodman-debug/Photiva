@@ -87,21 +87,6 @@ export const features: Feature[] = [
     screenshot: "/screenshots/video-compression.png",
   },
   {
-    id: "secure-vault",
-    badge: "SECURE VAULT",
-    title: "Some photos aren't for everyone.",
-    description:
-      "Move sensitive photos into an encrypted vault protected by Touch ID. They're hidden from your library, excluded from all cleanup operations, and encrypted with AES-256. Only you can access them.",
-    bullets: [
-      "AES-GCM 256-bit encryption for all vault contents",
-      "Touch ID and macOS password authentication",
-      "Hidden from all cleanup and organization operations",
-      "Export back to your library anytime",
-    ],
-    screenshotLabel: "Photiva Secure Vault showing encrypted photos with lock icons and Add Photos button",
-    screenshot: "/screenshots/secure-vault.png",
-  },
-  {
     id: "contact-cleanup",
     badge: "CONTACT CLEANUP",
     title: "Your contacts are a mess too.",
@@ -144,8 +129,7 @@ export const comparisonRows: ComparisonRow[] = [
   { feature: "Blurry photo detection", photiva: "Yes", subscriptionApps: "No", freeTools: "No" },
   { feature: "Smart organization (5 systems)", photiva: "Yes", subscriptionApps: "No", freeTools: "No" },
   { feature: "Event auto-detection", photiva: "Yes", subscriptionApps: "No", freeTools: "No" },
-  { feature: "Secure encrypted vault", photiva: "Yes", subscriptionApps: "No", freeTools: "No" },
-  { feature: "Photo & video compression", photiva: "Yes", subscriptionApps: "Partial", freeTools: "No" },
+{ feature: "Photo & video compression", photiva: "Yes", subscriptionApps: "Partial", freeTools: "No" },
   { feature: "Contact cleanup", photiva: "Yes", subscriptionApps: "No", freeTools: "No" },
   { feature: "100% on-device processing", photiva: "Yes", subscriptionApps: "No", freeTools: "Partial" },
   { feature: "Rollback / undo", photiva: "Yes", subscriptionApps: "No", freeTools: "No" },

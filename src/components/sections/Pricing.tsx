@@ -10,7 +10,6 @@ const included = [
   "Duplicate & similar photo detection",
   "5 organization systems + custom templates",
   "Photo & video compression",
-  "Secure encrypted vault with Touch ID",
   "Contact cleanup & merge",
   "30-day rollback on all operations",
   "RAW + sidecar file support",

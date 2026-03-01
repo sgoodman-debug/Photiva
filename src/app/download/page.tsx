@@ -29,7 +29,6 @@ const paidFeatures = [
   "Duplicate & similar photo deletion",
   "5 photo organisation systems + custom templates",
   "Photo & video compression (HEIF conversion)",
-  "Secure encrypted vault with Touch ID",
   "Contact cleanup & smart merge",
   "30-day undo on every operation",
   "RAW + sidecar file support",
@@ -55,7 +54,7 @@ const steps = [
   {
     number: "4",
     title: "Unlock & Clean",
-    body: "Pay once to unlock cleanup, organisation, compression, and vault. No subscription ever.",
+    body: "Pay once to unlock cleanup, organisation, and compression. No subscription ever.",
   },
 ];
 
