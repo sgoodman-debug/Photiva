@@ -22,6 +22,10 @@ const outfit = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://photiva.app"),
+  icons: {
+    icon: "/app-icon.png",
+    apple: "/app-icon.png",
+  },
   title: {
     default: "Photiva | Mac Photo Cleaner",
     template: "%s | Photiva",
