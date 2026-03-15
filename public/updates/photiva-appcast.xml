@@ -6,6 +6,15 @@
         <description>Photiva release notes</description>
         <language>en</language>
         <item>
+            <title>Version 1.0.6</title>
+            <description>Notarized build with hardened runtime.</description>
+            <pubDate>Sat, 15 Mar 2026 16:00:00 +0000</pubDate>
+            <sparkle:version>7</sparkle:version>
+            <sparkle:shortVersionString>1.0.6</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/sgoodman-debug/photivareleases/releases/download/v1.0.6/Photiva-1.0.6.zip" sparkle:edSignature="PFxKE0bkdEbbN9vi7KWlbmjWNLd8GdYQbMrcIHdHE36XPG35MbgOOBF5wqiApD9ZuOwtz6dO43yNzxTyahVXBQ==" length="7650167" type="application/octet-stream"/>
+        </item>
+        <item>
             <title>Version 1.0.5</title>
             <description>Bug fixes and improvements.</description>
             <pubDate>Sat, 15 Mar 2026 15:00:00 +0000</pubDate>
