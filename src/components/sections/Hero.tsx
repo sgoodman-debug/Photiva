@@ -221,7 +221,7 @@ export function Hero() {
                 </li>
                 <li className="flex items-start gap-2 text-sm text-muted">
                   <span className="text-accent shrink-0 leading-5">&#10003;</span>
-                  Detect blurry and useless shots
+                  100 percent on-device. Nothing uploaded.
                 </li>
                 <li className="flex items-start gap-2 text-sm text-muted">
                   <span className="text-accent shrink-0 leading-5">&#10003;</span>
@@ -229,7 +229,7 @@ export function Hero() {
                 </li>
                 <li className="flex items-start gap-2 text-sm text-muted">
                   <span className="text-accent shrink-0 leading-5">&#10003;</span>
-                  100 percent on-device. Nothing uploaded.
+                  Detect blurry and useless shots
                 </li>
               </ul>
             </FadeIn>
