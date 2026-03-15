@@ -10,7 +10,6 @@ const included = [
   "Duplicate & similar photo detection",
   "5 organization systems + custom templates",
   "Photo & video compression",
-  "Contact cleanup & merge",
   "30-day rollback on all operations",
   "RAW + sidecar file support",
   "Lifetime updates",
@@ -33,7 +32,7 @@ export function Pricing() {
         <FadeIn delay={0.2}>
           <p className="mt-4 text-muted max-w-lg mx-auto">
             Download and scan your entire library for free.
-            Purchase once to unlock cleanup, organization, compression, vault, and contact tools.
+            Purchase once to unlock cleanup, organization, compression, and vault tools.
           </p>
         </FadeIn>
       </div>

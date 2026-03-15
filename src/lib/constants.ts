@@ -86,20 +86,6 @@ export const features: Feature[] = [
     screenshotLabel: "Photiva Video Compression view showing 68 videos with preset options and estimated savings",
     screenshot: "/screenshots/video-compression.png",
   },
-  {
-    id: "contact-cleanup",
-    badge: "CONTACT CLEANUP",
-    title: "Your contacts are a mess too.",
-    description:
-      "Duplicate contacts pile up from email, iCloud, and phone syncs. Photiva finds them by exact name, phone number, or fuzzy matching and merges them intelligently. Emails, phone numbers, and names are combined. Duplicates are deleted.",
-    bullets: [
-      "Exact name and phone number matching across all sources",
-      "Fuzzy name matching that catches \"John Smith\" vs \"jon smith\" vs \"Jon Smith\"",
-      "Smart merge: combines all contact info, deletes duplicates",
-    ],
-    screenshotLabel: "Photiva Contact Cleanup showing duplicate contacts grouped by name and phone number with Merge and Delete options",
-    screenshot: "/screenshots/contact-cleanup.png",
-  },
 ];
 
 export const steps: Step[] = [
@@ -130,7 +116,6 @@ export const comparisonRows: ComparisonRow[] = [
   { feature: "Smart organization (5 systems)", photiva: "Yes", subscriptionApps: "No", freeTools: "No" },
   { feature: "Event auto-detection", photiva: "Yes", subscriptionApps: "No", freeTools: "No" },
 { feature: "Photo & video compression", photiva: "Yes", subscriptionApps: "Partial", freeTools: "No" },
-  { feature: "Contact cleanup", photiva: "Yes", subscriptionApps: "No", freeTools: "No" },
   { feature: "100% on-device processing", photiva: "Yes", subscriptionApps: "No", freeTools: "Partial" },
   { feature: "Rollback / undo", photiva: "Yes", subscriptionApps: "No", freeTools: "No" },
   { feature: "RAW + sidecar support", photiva: "Yes", subscriptionApps: "Partial", freeTools: "No" },
@@ -161,7 +146,7 @@ export const faqs: FAQ[] = [
   {
     question: "Is my data safe?",
     answer:
-      "Everything runs locally on your Mac. No data is uploaded anywhere. No accounts, no telemetry, no cloud processing. The vault uses AES-256 encryption with Touch ID authentication.",
+      "Everything runs locally on your Mac. No data is uploaded anywhere. No accounts, no telemetry, no cloud processing.",
   },
   {
     question: "What photo formats are supported?",
@@ -181,7 +166,7 @@ export const faqs: FAQ[] = [
   {
     question: "How is this different from Gemini or CleanMyMac?",
     answer:
-      "Photiva combines duplicate detection, smart organization, compression, vault encryption, and contact cleanup in one app with no subscription. Most alternatives only cover one or two of these and charge you every year.",
+      "Photiva combines duplicate detection, smart organization, compression, and vault encryption in one app with no subscription. Most alternatives only cover one or two of these and charge you every year.",
   },
   {
     question: "Is Photiva free to use?",

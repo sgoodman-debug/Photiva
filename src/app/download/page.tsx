@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 const freeFeatures = [
-  "Full library scan — every photo, video, and Live Photo",
+  "Full library scan: every photo, video, and Live Photo",
   "Duplicate detection with exact + visual matching",
   "Blurry photo scoring across your entire library",
   "Similar photo grouping and side-by-side review",
@@ -28,7 +28,6 @@ const paidFeatures = [
   "Duplicate & similar photo deletion",
   "5 photo organisation systems + custom templates",
   "Photo & video compression (HEIF conversion)",
-  "Contact cleanup & smart merge",
   "30-day undo on every operation",
   "RAW + sidecar file support",
   "Lifetime updates included",
@@ -43,7 +42,7 @@ const steps = [
   {
     number: "2",
     title: "Scan for Free",
-    body: "Photiva scans your entire library on-device — duplicates, blur, similar photos, and large videos.",
+    body: "Photiva scans your entire library on-device: duplicates, blur, similar photos, and large videos.",
   },
   {
     number: "3",
@@ -115,7 +114,7 @@ export default function DownloadPage() {
 
             <FadeIn delay={0.2}>
               <p className="mt-6 text-lg text-muted max-w-xl mx-auto leading-relaxed">
-                Photiva scans your entire photo library for duplicates, blurry shots, and similar images — completely free.
+                Photiva scans your entire photo library for duplicates, blurry shots, and similar images, completely free.
                 Unlock one-click cleanup, organisation, and compression for a single $29.99 payment.
               </p>
             </FadeIn>
@@ -174,8 +173,8 @@ export default function DownloadPage() {
               {/* Screenshot */}
               <div className="relative bg-[#1a1030]">
                 <Image
-                  src="/screenshots/contact-cleanup.png"
-                  alt="Photiva app — Contact Cleanup interface"
+                  src="/screenshots/smart-cleanup.png"
+                  alt="Photiva app Smart Cleanup interface"
                   width={1200}
                   height={750}
                   className="w-full"
@@ -184,7 +183,7 @@ export default function DownloadPage() {
               </div>
             </div>
             <p className="mt-4 text-center text-sm text-muted-foreground">
-              Photiva&apos;s Contact Cleanup — find and merge duplicate contacts safely
+              Photiva Smart Cleanup: scan your entire library and see what can be cleaned
             </p>
           </div>
         </FadeIn>
