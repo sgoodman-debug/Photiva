@@ -4,8 +4,7 @@ import { Button } from "@/components/ui/Button";
 import { Section } from "@/components/layout/Section";
 import { FadeIn } from "@/components/animations/FadeIn";
 
-// TODO: Replace with your actual .dmg / download URL
-const DOWNLOAD_URL = "https://github.com/sgoodman-debug/photivareleases/releases/latest/download/Photiva-1.0.0.dmg";
+const DOWNLOAD_URL = "https://github.com/sgoodman-debug/photivareleases/releases/latest/download/Photiva.dmg";
 const BUY_URL = "https://store.appiva.app/checkout/buy/9ccb153d-2370-4663-bef7-c9ba8658fac5";
 
 export const metadata: Metadata = {
