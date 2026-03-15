@@ -214,21 +214,21 @@ export function Hero() {
                 Photiva automatically finds duplicate, blurry, and similar photos and organizes your entire library in minutes.
                 No cloud uploads. No subscription. Just a clean Mac.
               </p>
-              <ul className="mt-6 grid grid-cols-2 gap-x-6 gap-y-2">
-                <li className="flex items-center gap-2 text-sm text-muted">
-                  <span className="text-accent">&#10003;</span>
+              <ul className="mt-6 grid grid-cols-2 gap-x-6 gap-y-3">
+                <li className="flex items-start gap-2 text-sm text-muted">
+                  <span className="text-accent shrink-0 leading-5">&#10003;</span>
                   Recover 10&ndash;40GB in a typical cleanup session
                 </li>
-                <li className="flex items-center gap-2 text-sm text-muted">
-                  <span className="text-accent">&#10003;</span>
+                <li className="flex items-start gap-2 text-sm text-muted">
+                  <span className="text-accent shrink-0 leading-5">&#10003;</span>
                   Detect blurry and useless shots
                 </li>
-                <li className="flex items-center gap-2 text-sm text-muted">
-                  <span className="text-accent">&#10003;</span>
+                <li className="flex items-start gap-2 text-sm text-muted">
+                  <span className="text-accent shrink-0 leading-5">&#10003;</span>
                   Auto-organize by event and date
                 </li>
-                <li className="flex items-center gap-2 text-sm text-muted">
-                  <span className="text-accent">&#10003;</span>
+                <li className="flex items-start gap-2 text-sm text-muted">
+                  <span className="text-accent shrink-0 leading-5">&#10003;</span>
                   100 percent on-device. Nothing uploaded.
                 </li>
               </ul>
