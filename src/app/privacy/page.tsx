@@ -15,127 +15,110 @@ export default function PrivacyPolicyPage() {
       <h1 className="font-display text-3xl sm:text-4xl font-extrabold tracking-[-0.03em] text-foreground">
         Privacy Policy
       </h1>
-      <p className="mt-2 text-sm text-muted">Last updated: February 27, 2026</p>
+      <p className="mt-2 text-sm text-muted">Last updated: March 2026</p>
+
+      <p className="mt-6 text-muted leading-relaxed text-[15px]">
+        This Privacy Policy explains how Photiva handles information when you use the Photiva software and website.
+      </p>
 
       <div className="mt-10 space-y-10 text-muted leading-relaxed text-[15px]">
+
         <section>
-          <h2 className="text-xl font-bold text-foreground mb-3">Introduction</h2>
+          <h2 className="text-xl font-bold text-foreground mb-3">1. Overview</h2>
           <p>
-            Photiva (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) is a macOS application designed to help
-            you clean, organize, compress, and protect your photo library. We are committed to protecting your privacy.
-            This Privacy Policy explains how we handle your data when you use Photiva.
+            Photiva is designed with privacy as a core principle. The software processes photos and files locally on
+            your Mac and does not require user accounts or cloud uploads.
           </p>
+          <p className="mt-3">Your personal photos remain on your device.</p>
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-foreground mb-3">Information We Collect</h2>
+          <h2 className="text-xl font-bold text-foreground mb-3">2. Local Processing</h2>
           <p>
-            Photiva is designed with privacy at its core. We collect <strong className="text-foreground">minimal to no personal information</strong>:
+            Photiva analyzes files directly on your Mac to detect duplicates, blurry photos, similar images, and
+            other file characteristics.
           </p>
+          <p className="mt-3">This processing occurs entirely on-device using macOS frameworks.</p>
+          <p className="mt-3">Photiva does not upload or transmit your photos to external servers.</p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-bold text-foreground mb-3">3. No Photo Collection</h2>
+          <p>Photiva does not collect, store, or access:</p>
           <ul className="mt-3 list-disc pl-6 space-y-2">
-            <li>
-              <strong className="text-foreground">Purchase information:</strong> If you purchase Photiva through the Mac App Store, Apple handles the
-              transaction. We do not receive or store your payment details.
-            </li>
-            <li>
-              <strong className="text-foreground">Crash reports (optional):</strong> If you opt in to Apple&apos;s crash reporting, anonymized diagnostic
-              data may be shared with us through App Store Connect. This data does not contain personal information or
-              photos.
-            </li>
+            <li>Your photos</li>
+            <li>Your photo library contents</li>
+            <li>Your file metadata</li>
+            <li>Your personal files</li>
           </ul>
+          <p className="mt-3">All analysis happens locally on your device.</p>
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-foreground mb-3">Information We Do NOT Collect</h2>
-          <p>Photiva does not:</p>
+          <h2 className="text-xl font-bold text-foreground mb-3">4. Website Analytics</h2>
+          <p>
+            The Photiva website may use basic analytics tools to understand how visitors interact with the website.
+          </p>
+          <p className="mt-3">This information may include:</p>
           <ul className="mt-3 list-disc pl-6 space-y-2">
-            <li>Upload your photos, videos, contacts, or any personal files to any server</li>
-            <li>Require an account, login, or registration</li>
-            <li>Track your usage with analytics or telemetry</li>
-            <li>Use cookies or third-party tracking tools</li>
-            <li>Access the internet during normal operation</li>
-            <li>Share any data with third parties</li>
+            <li>Browser type</li>
+            <li>Device type</li>
+            <li>Pages visited</li>
+            <li>Referral sources</li>
           </ul>
+          <p className="mt-3">This information is used only to improve the website experience.</p>
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-foreground mb-3">Local Data Processing</h2>
-          <p>
-            All photo scanning, duplicate detection, organization, and compression happens entirely on your Mac. Your
-            files never leave your device. Photiva reads your photo library metadata (file names, EXIF data, file sizes,
-            timestamps) to perform its functions, but this data is processed locally and is not transmitted anywhere.
+          <h2 className="text-xl font-bold text-foreground mb-3">5. Payment Processing</h2>
+          <p>Purchases of Photiva may be handled through third-party payment providers.</p>
+          <p className="mt-3">
+            These providers process payment information such as billing details and payment method information.
+          </p>
+          <p className="mt-3">Photiva does not store payment card details.</p>
+          <p className="mt-3">
+            Payment providers may have their own privacy policies governing how payment data is handled.
           </p>
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-foreground mb-3">Secure Vault &amp; Encryption</h2>
+          <h2 className="text-xl font-bold text-foreground mb-3">6. Support Communications</h2>
+          <p>If you contact support, we may receive information such as:</p>
+          <ul className="mt-3 list-disc pl-6 space-y-2">
+            <li>Email address</li>
+            <li>Message contents</li>
+            <li>Diagnostic details you choose to share</li>
+          </ul>
+          <p className="mt-3">This information is used only to respond to your support request.</p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-bold text-foreground mb-3">7. Data Security</h2>
           <p>
-            The Secure Vault feature encrypts photos using AES-GCM 256-bit encryption. Encrypted files are stored
-            locally on your Mac. Authentication is handled by macOS through Touch ID or your system password. We do not
-            have access to your vault contents or encryption keys.
+            Because Photiva processes files locally and does not store photo libraries on external servers, the
+            primary control of data security remains with the user&apos;s device.
+          </p>
+          <p className="mt-3">Users are encouraged to maintain backups of important files.</p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-bold text-foreground mb-3">8. Changes to This Policy</h2>
+          <p>
+            We may update this Privacy Policy from time to time. Updated versions will be posted on the website with
+            a revised &ldquo;Last updated&rdquo; date.
           </p>
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-foreground mb-3">Contact Cleanup</h2>
+          <h2 className="text-xl font-bold text-foreground mb-3">9. Contact</h2>
           <p>
-            The Contact Cleanup feature accesses your macOS Contacts database to find and merge duplicate entries. This
-            data is processed locally. Contact information is never uploaded or shared.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-foreground mb-3">Third-Party Services</h2>
-          <p>
-            Photiva is distributed exclusively through the Mac App Store. Apple&apos;s own privacy practices apply to
-            the purchase and download process. We recommend reviewing{" "}
-            <a
-              href="https://www.apple.com/legal/privacy/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent hover:underline"
-            >
-              Apple&apos;s Privacy Policy
-            </a>{" "}
-            for details on how they handle App Store transactions.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-foreground mb-3">Data Retention</h2>
-          <p>
-            Since we do not collect personal data, there is nothing to retain. Any local data generated by Photiva (scan
-            results, organization history, rollback data) is stored on your Mac and can be deleted at any time by
-            removing the application.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-foreground mb-3">Children&apos;s Privacy</h2>
-          <p>
-            Photiva does not knowingly collect any personal information from children under 13. Since we do not collect
-            personal data from any users, this applies universally.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-foreground mb-3">Changes to This Policy</h2>
-          <p>
-            We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated
-            &ldquo;Last updated&rdquo; date. We encourage you to review this policy periodically.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-foreground mb-3">Contact Us</h2>
-          <p>
-            If you have any questions about this Privacy Policy, please contact us at{" "}
+            If you have questions about this Privacy Policy, please contact:{" "}
             <a href="mailto:support@photiva.app" className="text-accent hover:underline">
               support@photiva.app
             </a>
-            .
           </p>
         </section>
+
       </div>
     </main>
   );
