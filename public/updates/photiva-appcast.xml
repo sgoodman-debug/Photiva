@@ -23,12 +23,7 @@
             <description><![CDATA[
                 <h2>What's New in 1.0.8</h2>
                 <ul>
-                    <li>Fixed similar photo groups ignoring the similarity threshold</li>
-                    <li>Fixed similarity slider showing wrong value and not responding in Smart Cleanup</li>
-                    <li>Fixed Compare menu items not running any analysis</li>
-                    <li>Fixed brief flash of wrong photo count when viewing similar results</li>
-                    <li>Organization history: offline drive warning badge and pre-flight check</li>
-                    <li>Organization history: result summary showing exactly how many files were restored</li>
+                    <li>Reliability and performance improvements</li>
                 </ul>
             ]]></description>
             <pubDate>Mon, 17 Mar 2026 11:30:00 +0000</pubDate>
