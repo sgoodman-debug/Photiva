@@ -2,71 +2,71 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
     <channel>
         <title>Photiva</title>
-        <link>https://photiva.app</link>
+        <link>https://appiva.app</link>
         <description>Photiva release notes</description>
         <language>en</language>
+
+        <!-- ============================================================
+             HOW TO SHIP AN UPDATE
+             ============================================================
+             1. Build a Release archive in Xcode → export as "Developer ID"
+             2. Zip the .app: ditto -c -k --sequesterRsrc --keepParent Photiva.app Photiva-X.Y.zip
+             3. Generate the EdDSA signature:
+                    ~/Library/Developer/Xcode/DerivedData/Photiva-*/SourcePackages/artifacts/sparkle/Sparkle/bin/sign_update Photiva-X.Y.zip
+             4. Upload the zip to the photivareleases repo
+             5. Duplicate the latest <item> below, fill in version/url/length/signature
+             6. Commit this file and push — Vercel will deploy the updated appcast
+             ============================================================ -->
+
         <item>
-            <title>Version 1.0.7</title>
-            <description>Library mode fixes, scan performance improvements, and results UI fixes.</description>
-            <pubDate>Sun, 16 Mar 2026 12:00:00 +0000</pubDate>
-            <sparkle:version>8</sparkle:version>
-            <sparkle:shortVersionString>1.0.7</sparkle:shortVersionString>
+            <title>Version 1.0.8</title>
+            <description><![CDATA[
+                <h2>What's New in 1.0.8</h2>
+                <ul>
+                    <li>Fixed similar photo groups ignoring the similarity threshold</li>
+                    <li>Fixed similarity slider showing wrong value and not responding in Smart Cleanup</li>
+                    <li>Fixed Compare menu items not running any analysis</li>
+                    <li>Fixed brief flash of wrong photo count when viewing similar results</li>
+                    <li>Organization history: offline drive warning badge and pre-flight check</li>
+                    <li>Organization history: result summary showing exactly how many files were restored</li>
+                </ul>
+            ]]></description>
+            <pubDate>Mon, 17 Mar 2026 11:30:00 +0000</pubDate>
+            <sparkle:version>9</sparkle:version>
+            <sparkle:shortVersionString>1.0.8</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/sgoodman-debug/photivareleases/releases/download/v1.0.7/Photiva-1.0.7.zip" sparkle:edSignature="L7IcAX2E4J5REDbYoL48TweI5RG6b9+9+zAldpZT5K12IKspqwMkJZdXVDA4QfWizGGIBjgIu2MsivA0Fi9eAQ==" length="7759030" type="application/octet-stream"/>
+            <enclosure
+                url="https://github.com/sgoodman-debug/photivareleases/raw/main/Photiva-1.0.8.zip"
+                sparkle:edSignature="4dy9HycM0XHtXlXgf3DVirWA+luICyrBBH8GK6tJyijkc35cZQFNQX43Al5cuWI4FvLyuKixke4odH1sWc1jAw=="
+                length="7902817"
+                type="application/octet-stream"
+            />
         </item>
-        <item>
-            <title>Version 1.0.6</title>
-            <description>Notarized build with hardened runtime.</description>
-            <pubDate>Sat, 15 Mar 2026 16:00:00 +0000</pubDate>
-            <sparkle:version>7</sparkle:version>
-            <sparkle:shortVersionString>1.0.6</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/sgoodman-debug/photivareleases/releases/download/v1.0.6/Photiva-1.0.6.zip" sparkle:edSignature="PFxKE0bkdEbbN9vi7KWlbmjWNLd8GdYQbMrcIHdHE36XPG35MbgOOBF5wqiApD9ZuOwtz6dO43yNzxTyahVXBQ==" length="7650167" type="application/octet-stream"/>
-        </item>
-        <item>
-            <title>Version 1.0.5</title>
-            <description>Bug fixes and improvements.</description>
-            <pubDate>Sat, 15 Mar 2026 15:00:00 +0000</pubDate>
-            <sparkle:version>6</sparkle:version>
-            <sparkle:shortVersionString>1.0.5</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/sgoodman-debug/photivareleases/releases/download/v1.0.5/Photiva-1.0.5.zip" sparkle:edSignature="bquZKNPdR1qEeWueZgRH8LnuaQ1rpSDJoKK7iPgX7J/4zQpar8IQv84+28PddN1Wf/OZlaC6MAARHbq3XAeNAw==" length="7650139" type="application/octet-stream"/>
-        </item>
-        <item>
-            <title>Version 1.0.4</title>
-            <description>Fixed sandboxed auto-update installer.</description>
-            <pubDate>Sat, 15 Mar 2026 14:00:00 +0000</pubDate>
-            <sparkle:version>5</sparkle:version>
-            <sparkle:shortVersionString>1.0.4</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/sgoodman-debug/photivareleases/releases/download/v1.0.4/Photiva-1.0.4.zip" sparkle:edSignature="U6+kyp5hvi+N8dD/M0z5XmrV1DYf+OcVQRy9kHMG0oXBJERkFNkIwLrHtZ24mJW2pLlPbWATdlRUdi1MykGvDw==" length="7650190" type="application/octet-stream"/>
-        </item>
-        <item>
-            <title>Version 1.0.3</title>
-            <description>Bug fixes and improvements.</description>
-            <pubDate>Sat, 15 Mar 2026 13:00:00 +0000</pubDate>
-            <sparkle:version>4</sparkle:version>
-            <sparkle:shortVersionString>1.0.3</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/sgoodman-debug/photivareleases/releases/download/v1.0.3/Photiva-1.0.3.zip" sparkle:edSignature="5Ka9cl7qWGqRf4bJpnBtvBUSYjP6auWSeYOxQzLujITr2gVM2/biA8NNkBJUHU4ZFQZ08/mohkPO0a4ZKbk6AA==" length="7650042" type="application/octet-stream"/>
-        </item>
-        <item>
-            <title>Version 1.0.2</title>
-            <description>Fixed auto-update installer for sandboxed apps. Upgraded Sparkle framework.</description>
-            <pubDate>Sat, 15 Mar 2026 12:00:00 +0000</pubDate>
-            <sparkle:version>3</sparkle:version>
-            <sparkle:shortVersionString>1.0.2</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/sgoodman-debug/photivareleases/releases/download/v1.0.2/Photiva-1.0.2.zip" sparkle:edSignature="+odWWHlvO4WppiSJktCbaHQV3MJNlfQQypjoUtoy6aVCjcvP2sw/Jhu4I8012GfKfcq1PmnXlBmD7XfdlSHqBQ==" length="7650049" type="application/octet-stream"/>
-        </item>
+
         <item>
             <title>Version 1.0.1</title>
-            <description>Bug fixes and improvements.</description>
+            <description><![CDATA[
+                <h2>What's New in 1.0.1</h2>
+                <ul>
+                    <li>Live Photo and Screenshot on-demand scanning</li>
+                    <li>Improved location cleanup with horizontal chips and white pins</li>
+                    <li>Organize: video separation, background preview generation</li>
+                    <li>Glass card UI for scan progress views</li>
+                    <li>Geocoding rate limiting to prevent throttling</li>
+                    <li>License activation works offline</li>
+                </ul>
+            ]]></description>
             <pubDate>Sat, 15 Mar 2026 00:00:00 +0000</pubDate>
             <sparkle:version>2</sparkle:version>
             <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/sgoodman-debug/photivareleases/releases/download/v1.0.1/Photiva-1.0.1.zip" sparkle:edSignature="e/hZdKB25W6OgF6SucCvHxwy+6cxYrRsBrHNzHo/u/xlBgeqzxU5pqg84vJwOtB/BKCf4KYkqJQh8H1MaJWECQ==" length="7910426" type="application/octet-stream"/>
+            <enclosure
+                url="https://github.com/sgoodman-debug/photivareleases/raw/main/Photiva-1.0.1.zip"
+                sparkle:edSignature="e/hZdKB25W6OgF6SucCvHxwy+6cxYrRsBrHNzHo/u/xlBgeqzxU5pqg84vJwOtB/BKCf4KYkqJQh8H1MaJWECQ=="
+                length="7910426"
+                type="application/octet-stream"
+            />
         </item>
+
     </channel>
 </rss>
