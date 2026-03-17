@@ -10,7 +10,7 @@
              HOW TO SHIP AN UPDATE
              ============================================================
              1. Build a Release archive in Xcode → export as "Developer ID"
-             2. Zip the .app: ditto -c -k --sequesterRsrc --keepParent Photiva.app Photiva-X.Y.zip
+             2. Zip the .app: ditto -c -k -sequesterRsrc -keepParent Photiva.app Photiva-X.Y.zip
              3. Generate the EdDSA signature:
                     ~/Library/Developer/Xcode/DerivedData/Photiva-*/SourcePackages/artifacts/sparkle/Sparkle/bin/sign_update Photiva-X.Y.zip
              4. Upload the zip to the photivareleases repo
