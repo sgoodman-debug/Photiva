@@ -31,7 +31,7 @@
             <sparkle:shortVersionString>1.0.8</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <enclosure
-                url="https://github.com/sgoodman-debug/photivareleases/raw/main/Photiva-1.0.8.zip"
+                url="https://github.com/sgoodman-debug/photivareleases/releases/download/v1.0.8/Photiva-1.0.8.zip"
                 sparkle:edSignature="4dy9HycM0XHtXlXgf3DVirWA+luICyrBBH8GK6tJyijkc35cZQFNQX43Al5cuWI4FvLyuKixke4odH1sWc1jAw=="
                 length="7902817"
                 type="application/octet-stream"
