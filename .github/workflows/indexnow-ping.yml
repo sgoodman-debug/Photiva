@@ -1,0 +1,40 @@
+name: IndexNow Ping
+
+# Fires after every push to main (i.e. after every Vercel production deploy).
+# Waits 90 s for the Vercel build to finish, then submits all site URLs to
+# IndexNow so Bing/Yandex index the changes immediately.
+on:
+  push:
+    branches: [main]
+
+jobs:
+  ping:
+    name: Submit URLs to IndexNow
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Wait for Vercel deployment
+        run: sleep 90
+
+      - name: Ping IndexNow
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: |
+          curl -s -o /dev/null -w "IndexNow HTTP status: %{http_code}\n" \
+            -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d '{
+              "host": "photiva.app",
+              "key": "'"$INDEXNOW_KEY"'",
+              "keyLocation": "https://photiva.app/'"$INDEXNOW_KEY"'.txt",
+              "urlList": [
+                "https://photiva.app",
+                "https://photiva.app/download",
+                "https://photiva.app/guides",
+                "https://photiva.app/guides/remove-duplicate-photos-mac",
+                "https://photiva.app/guides/find-blurry-photos-mac",
+                "https://photiva.app/guides/organize-apple-photos-library",
+                "https://photiva.app/guides/mac-photo-cleaner",
+                "https://photiva.app/guides/photiva-vs-gemini"
+              ]
+            }'
