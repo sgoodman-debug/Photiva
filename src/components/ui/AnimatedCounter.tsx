@@ -1,5 +1,3 @@
-"use client";
-
 interface AnimatedCounterProps {
   value: number;
   suffix?: string;

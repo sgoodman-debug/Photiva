@@ -1,7 +1,6 @@
 "use client";
 
 import { type ButtonHTMLAttributes, type MouseEvent } from "react";
-import posthog from "posthog-js";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "ghost";
@@ -38,10 +37,12 @@ export function Button({
 
   function trackClick(e: MouseEvent) {
     const label = (e.currentTarget as HTMLElement).textContent?.trim() || "";
-    posthog.capture("cta_clicked", {
-      label,
-      href: href || undefined,
-      variant,
+    import("posthog-js").then(({ default: posthog }) => {
+      posthog.capture("cta_clicked", {
+        label,
+        href: href || undefined,
+        variant,
+      });
     });
   }
 
