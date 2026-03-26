@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/Button";
 import { navLinks } from "@/lib/constants";
 
 export function Navbar() {
-  const { progress, scrolled } = useScrollProgress();
+  const { progressBarRef, scrolled } = useScrollProgress();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
@@ -21,8 +21,9 @@ export function Navbar() {
     >
       {/* Scroll progress bar */}
       <div
-        className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-accent to-pink transition-all duration-150"
-        style={{ width: `${progress * 100}%` }}
+        ref={progressBarRef}
+        className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-accent to-pink transition-[width] duration-150"
+        style={{ width: "0%" }}
       />
 
       <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-5 sm:px-6 h-16">
