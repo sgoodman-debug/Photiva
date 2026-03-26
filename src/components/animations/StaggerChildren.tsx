@@ -1,7 +1,5 @@
 "use client";
-
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 
 interface StaggerChildrenProps {
   children: React.ReactNode;
@@ -9,26 +7,33 @@ interface StaggerChildrenProps {
   className?: string;
 }
 
-export function StaggerChildren({
-  children,
-  staggerDelay = 0.1,
-  className,
-}: StaggerChildrenProps) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
+export function StaggerChildren({ children, className }: StaggerChildrenProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "-80px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <motion.div
+    <div
       ref={ref}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
-      variants={{
-        visible: { transition: { staggerChildren: staggerDelay } },
-      }}
-      className={className}
+      className={`stagger-container${visible ? " visible" : ""}${className ? ` ${className}` : ""}`}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }
 
@@ -40,14 +45,8 @@ export function StaggerItem({
   className?: string;
 }) {
   return (
-    <motion.div
-      variants={{
-        hidden: { opacity: 0, y: 24 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] } },
-      }}
-      className={className}
-    >
+    <div className={`stagger-item${className ? ` ${className}` : ""}`}>
       {children}
-    </motion.div>
+    </div>
   );
 }

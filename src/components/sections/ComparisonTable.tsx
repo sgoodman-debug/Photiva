@@ -1,5 +1,3 @@
-"use client";
-
 import { Section } from "@/components/layout/Section";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { comparisonRows } from "@/lib/constants";

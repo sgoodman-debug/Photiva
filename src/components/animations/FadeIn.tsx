@@ -1,24 +1,24 @@
 "use client";
+import { useRef, useState, useEffect } from "react";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+type Direction = "up" | "down" | "left" | "right" | "none";
+
+const keyframeMap: Record<Direction, string> = {
+  up: "fade-in-up",
+  down: "fade-in-down",
+  left: "fade-in-from-right",
+  right: "fade-in-from-left",
+  none: "fade-in-up",
+};
 
 interface FadeInProps {
   children: React.ReactNode;
-  direction?: "up" | "down" | "left" | "right" | "none";
+  direction?: Direction;
   delay?: number;
   duration?: number;
   className?: string;
   once?: boolean;
 }
-
-const offsets = {
-  up: { y: 30 },
-  down: { y: -30 },
-  left: { x: 30 },
-  right: { x: -30 },
-  none: {},
-};
 
 export function FadeIn({
   children,
@@ -26,20 +26,37 @@ export function FadeIn({
   delay = 0,
   duration = 0.5,
   className,
-  once = true,
 }: FadeInProps) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once, margin: "-80px" });
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "-80px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <motion.div
+    <div
       ref={ref}
-      initial={{ opacity: 0, ...offsets[direction] }}
-      animate={isInView ? { opacity: 1, x: 0, y: 0 } : undefined}
-      transition={{ duration, delay, ease: [0.21, 0.47, 0.32, 0.98] }}
+      style={
+        visible
+          ? { animation: `${keyframeMap[direction]} ${duration}s cubic-bezier(0.21, 0.47, 0.32, 0.98) ${delay}s both` }
+          : { opacity: 0 }
+      }
       className={className}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }
