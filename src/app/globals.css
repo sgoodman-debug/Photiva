@@ -114,6 +114,14 @@ body {
   from { opacity: 0; transform: translateX(30px); }
   to { opacity: 1; transform: translateX(0); }
 }
+/* LCP-safe variant: translate only, no opacity change.
+   Use this on any element that wraps the LCP image — Chrome
+   won't record LCP until opacity > 0, so opacity animations
+   artificially inflate LCP by the full animation duration. */
+@keyframes slide-in-from-right {
+  from { transform: translateX(30px); }
+  to { transform: translateX(0); }
+}
 @keyframes fade-in-from-left {
   from { opacity: 0; transform: translateX(-30px); }
   to { opacity: 1; transform: translateX(0); }

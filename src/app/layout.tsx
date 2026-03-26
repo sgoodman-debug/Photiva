@@ -83,7 +83,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="dark">
-      <head>
+      <body className={`${inter.variable} ${outfit.variable} font-sans antialiased`}>
+        <noscript>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img height="1" width="1" style={{ display: "none" }} src="https://www.facebook.com/tr?id=1846756576038195&ev=PageView&noscript=1" alt="" />
+        </noscript>
+        <PostHogProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </PostHogProvider>
+        {/* Analytics — afterInteractive must live in <body>, not <head>,
+            so Next.js can apply deferred loading without injecting a
+            blocking synchronous chunk into <head>. */}
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-EZLYFY63MR" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">{`
           window.dataLayer = window.dataLayer || [];
@@ -103,17 +115,6 @@ export default function RootLayout({
           fbq('init','1846756576038195');
           fbq('track','PageView');
         `}</Script>
-      </head>
-      <body className={`${inter.variable} ${outfit.variable} font-sans antialiased`}>
-        <noscript>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img height="1" width="1" style={{ display: "none" }} src="https://www.facebook.com/tr?id=1846756576038195&ev=PageView&noscript=1" alt="" />
-        </noscript>
-        <PostHogProvider>
-          <Navbar />
-          {children}
-          <Footer />
-        </PostHogProvider>
       </body>
     </html>
   );

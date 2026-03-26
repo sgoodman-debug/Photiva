@@ -3,7 +3,9 @@ import { Button } from "@/components/ui/Button";
 
 const ease = "cubic-bezier(0.21, 0.47, 0.32, 0.98)";
 const fadeUp = (delay: number) => ({ animation: `fade-in-up 0.5s ${ease} ${delay}s both` });
-const fadeFromRight = (delay: number) => ({ animation: `fade-in-from-right 0.5s ${ease} ${delay}s both` });
+// LCP-safe: translate-only, no opacity — Chrome won't record LCP until opacity > 0,
+// so wrapping the hero image in an opacity animation pushes LCP by the full duration.
+const slideFromRight = (delay: number) => ({ animation: `slide-in-from-right 0.5s ${ease} ${delay}s both` });
 
 /* ── Animated mesh gradient background (CSS-only — no JS on main thread) ── */
 function AuroraBackground() {
@@ -104,6 +106,16 @@ function AuroraBackground() {
 export function Hero() {
   return (
     <section className="relative overflow-hidden pt-28 pb-20 bg-gradient-hero">
+      {/* Explicit preload for the LCP image. Next.js 16 generates a <link rel="preload">
+          for priority images but with an empty href when using responsive sizes — this
+          overrides it. React 18 hoists <link> elements from Server Components to <head>. */}
+      <link
+        rel="preload"
+        as="image"
+        imageSrcSet="/_next/image?url=%2Fscreenshots%2Fdashboard.png&w=640&q=85 640w,/_next/image?url=%2Fscreenshots%2Fdashboard.png&w=828&q=85 828w,/_next/image?url=%2Fscreenshots%2Fdashboard.png&w=1080&q=85 1080w,/_next/image?url=%2Fscreenshots%2Fdashboard.png&w=1200&q=85 1200w,/_next/image?url=%2Fscreenshots%2Fdashboard.png&w=1920&q=85 1920w"
+        imageSizes="(max-width: 1024px) 100vw, 50vw"
+        fetchPriority="high"
+      />
       <AuroraBackground />
 
       <div className="relative mx-auto max-w-[1200px] px-5 sm:px-6 py-12 md:py-16">
@@ -167,8 +179,8 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right: App screenshot */}
-          <div style={fadeFromRight(0.3)}>
+          {/* Right: App screenshot — slideFromRight has no opacity so LCP fires on image load */}
+          <div style={slideFromRight(0.3)}>
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl shadow-black/30">
                 <Image

@@ -9,6 +9,11 @@ const GUIDE_SLUGS = [
 ];
 
 const nextConfig: NextConfig = {
+  experimental: {
+    // Inline critical above-the-fold CSS and defer the rest (uses critters).
+    // Eliminates the render-blocking stylesheet on first paint.
+    optimizeCss: true,
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 31536000,
