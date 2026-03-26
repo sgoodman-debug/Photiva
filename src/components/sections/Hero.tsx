@@ -1,8 +1,9 @@
-"use client";
-
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
-import { FadeIn } from "@/components/animations/FadeIn";
+
+const ease = "cubic-bezier(0.21, 0.47, 0.32, 0.98)";
+const fadeUp = (delay: number) => ({ animation: `fade-in-up 0.5s ${ease} ${delay}s both` });
+const fadeFromRight = (delay: number) => ({ animation: `fade-in-from-right 0.5s ${ease} ${delay}s both` });
 
 /* ── Animated mesh gradient background (CSS-only — no JS on main thread) ── */
 function AuroraBackground() {
@@ -109,21 +110,21 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Copy */}
           <div className="max-w-xl">
-            <FadeIn delay={0.1}>
+            <div style={fadeUp(0.1)}>
               <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 border border-accent/20 px-4 py-1.5 mb-6">
                 <span className="text-accent text-xs font-semibold tracking-wide">Photiva</span>
               </div>
-            </FadeIn>
+            </div>
 
-            <FadeIn delay={0.2}>
+            <div style={fadeUp(0.2)}>
               <h1 className="font-display text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-[-0.04em] text-foreground leading-[1.05]">
                 Reclaim Your Mac&apos;s Storage.
                 <br />
                 Remove Duplicates. Organize Years of Photos.
               </h1>
-            </FadeIn>
+            </div>
 
-            <FadeIn delay={0.3}>
+            <div style={fadeUp(0.3)}>
               <p className="mt-6 text-lg text-muted leading-relaxed">
                 Photiva automatically finds duplicate, blurry, and similar photos and organizes your entire library in minutes.
                 No cloud uploads. No subscription. Just a clean Mac.
@@ -146,9 +147,9 @@ export function Hero() {
                   Detect blurry and useless shots
                 </li>
               </ul>
-            </FadeIn>
+            </div>
 
-            <FadeIn delay={0.4}>
+            <div style={fadeUp(0.4)}>
               <div className="mt-10 flex flex-col sm:flex-row gap-3">
                 <Button as="a" href="/download" size="lg">
                   Free Download &amp; Scan
@@ -163,11 +164,11 @@ export function Hero() {
               <p className="mt-2 text-xs text-muted">
                 Scan your entire library for free. Unlock cleanup and organization with a one-time purchase.
               </p>
-            </FadeIn>
+            </div>
           </div>
 
           {/* Right: App screenshot */}
-          <FadeIn direction="left" delay={0.3}>
+          <div style={fadeFromRight(0.3)}>
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl shadow-black/30">
                 <Image
@@ -188,14 +189,13 @@ export function Hero() {
                 <p className="text-lg font-display font-bold text-accent">24.3 GB</p>
               </div>
             </div>
-          </FadeIn>
+          </div>
         </div>
       </div>
 
       {/* ── Section divider: smooth gradient fade into next section ── */}
       <div className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-surface" />
-        {/* Thin accent line for a crisp edge */}
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent" />
       </div>
     </section>
