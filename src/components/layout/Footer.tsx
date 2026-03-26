@@ -19,7 +19,7 @@ export function Footer() {
 
           {/* Links */}
           <div>
-            <h4 className="text-sm font-semibold text-foreground mb-3">Product</h4>
+            <h3 className="text-sm font-semibold text-foreground mb-3">Product</h3>
             <ul className="space-y-2 text-sm text-muted">
               <li><Link href="/#features" className="hover:text-foreground transition-colors">Features</Link></li>
               <li><Link href="/#pricing" className="hover:text-foreground transition-colors">Pricing</Link></li>
@@ -28,7 +28,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold text-foreground mb-3">Guides</h4>
+            <h3 className="text-sm font-semibold text-foreground mb-3">Guides</h3>
             <ul className="space-y-2 text-sm text-muted">
               <li><Link href="/guides/remove-duplicate-photos-mac" className="hover:text-foreground transition-colors">Remove duplicate photos on Mac</Link></li>
               <li><Link href="/guides/find-blurry-photos-mac" className="hover:text-foreground transition-colors">Find blurry photos on Mac</Link></li>
@@ -39,7 +39,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold text-foreground mb-3">Legal</h4>
+            <h3 className="text-sm font-semibold text-foreground mb-3">Legal</h3>
             <ul className="space-y-2 text-sm text-muted">
               <li><Link href="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms" className="hover:text-foreground transition-colors">Terms &amp; Conditions</Link></li>

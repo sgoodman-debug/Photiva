@@ -52,7 +52,6 @@ export const features: Feature[] = [
       "Auto-selects the best shot in every group based on sharpness, exposure, and resolution",
     ],
     screenshotLabel: "Photiva Duplicate Detection results showing grouped duplicates with similarity percentage and Auto Mark",
-    screenshot: "/screenshots/duplicates.png",
   },
   {
     id: "organization",
@@ -84,7 +83,6 @@ export const features: Feature[] = [
       "Estimated savings shown before any operation",
     ],
     screenshotLabel: "Photiva Video Compression view showing 68 videos with preset options and estimated savings",
-    screenshot: "/screenshots/video-compression.png",
   },
 ];
 
