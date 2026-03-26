@@ -101,3 +101,36 @@ body {
   background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
 }
 
+/* ─── Aurora background animations (CSS-only, runs on compositor thread) ─── */
+@keyframes aurora-rotate-cw {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes aurora-rotate-ccw {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+@keyframes aurora-pulse-1 {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 0.45; }
+}
+@keyframes aurora-pulse-2 {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.38; }
+}
+@keyframes aurora-pulse-3 {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.5; }
+}
+@keyframes aurora-pulse-4 {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.28; }
+}
+@keyframes aurora-pulse-5 {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 0.45; }
+}
+@keyframes aurora-pulse-core {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.4); }
+}

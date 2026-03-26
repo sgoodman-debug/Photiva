@@ -1,172 +1,86 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/animations/FadeIn";
 
-/* ── Animated mesh gradient background ── */
+/* ── Animated mesh gradient background (CSS-only — no JS on main thread) ── */
 function AuroraBackground() {
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
-      {/* ── Base animated mesh gradient ── */}
-      {/* This creates a multi-point gradient that morphs by animating the positions */}
-      <motion.div
+      {/* Rotating mesh gradients */}
+      <div
         className="absolute -inset-[50%] opacity-60"
         style={{
-          background:
-            "conic-gradient(from 0deg at 30% 40%, #a78bfa44, #e8439333, #6c5ce744, #fd79a833, #a78bfa44)",
+          background: "conic-gradient(from 0deg at 30% 40%, #a78bfa44, #e8439333, #6c5ce744, #fd79a833, #a78bfa44)",
+          animation: "aurora-rotate-cw 30s linear infinite",
         }}
-        animate={{ rotate: [0, 360] }}
-        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
       />
-      <motion.div
+      <div
         className="absolute -inset-[50%] opacity-40"
         style={{
-          background:
-            "conic-gradient(from 180deg at 70% 60%, #6c5ce744, #fd79a833, #c4b5fc44, #e8439333, #6c5ce744)",
+          background: "conic-gradient(from 180deg at 70% 60%, #6c5ce744, #fd79a833, #c4b5fc44, #e8439333, #6c5ce744)",
+          animation: "aurora-rotate-ccw 25s linear infinite",
         }}
-        animate={{ rotate: [360, 0] }}
-        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
       />
 
-      {/* ── Floating aurora blobs ── */}
-      {/* Large purple - dominant */}
-      <motion.div
+      {/* Static blobs — opacity-only animation is compositor-safe with blur filters */}
+      <div
         className="absolute w-[700px] h-[400px] rounded-full blur-[100px]"
         style={{
           background: "linear-gradient(135deg, #a78bfa, #6c5ce7)",
           top: "5%",
           left: "0%",
-          opacity: 0.35,
+          animation: "aurora-pulse-1 8s ease-in-out infinite",
         }}
-        animate={{
-          x: [0, 150, -100, 50, 0],
-          y: [0, -80, 60, -30, 0],
-          scaleX: [1, 1.3, 0.9, 1.15, 1],
-          scaleY: [1, 0.85, 1.2, 0.95, 1],
-          rotate: [0, 8, -5, 3, 0],
-        }}
-        transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
       />
-
-      {/* Hot pink - wide ribbon */}
-      <motion.div
+      <div
         className="absolute w-[600px] h-[300px] rounded-full blur-[90px]"
         style={{
           background: "linear-gradient(135deg, #e84393, #fd79a8)",
           top: "30%",
           right: "-5%",
-          opacity: 0.3,
+          animation: "aurora-pulse-2 6s ease-in-out infinite -2s",
         }}
-        animate={{
-          x: [0, -140, 100, -80, 0],
-          y: [0, 100, -60, 80, 0],
-          scaleX: [1, 0.8, 1.2, 0.9, 1],
-          scaleY: [1, 1.3, 0.85, 1.15, 1],
-          rotate: [0, -10, 6, -4, 0],
-        }}
-        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
       />
-
-      {/* Deep indigo - concentrated core */}
-      <motion.div
+      <div
         className="absolute w-[500px] h-[500px] rounded-full blur-[80px]"
         style={{
           background: "radial-gradient(circle, #6c5ce7, #4a3aad)",
           bottom: "-5%",
           left: "25%",
-          opacity: 0.4,
+          animation: "aurora-pulse-3 5s ease-in-out infinite -1s",
         }}
-        animate={{
-          x: [0, 80, -120, 60, 0],
-          y: [0, -100, 40, -60, 0],
-          scale: [1, 1.3, 0.8, 1.2, 1],
-        }}
-        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
       />
-
-      {/* Lavender wide wash */}
-      <motion.div
+      <div
         className="absolute w-[800px] h-[300px] rounded-full blur-[130px]"
         style={{
           background: "linear-gradient(90deg, #c4b5fc, #a78bfa)",
           top: "50%",
           left: "20%",
-          opacity: 0.2,
+          animation: "aurora-pulse-4 7s ease-in-out infinite -3s",
         }}
-        animate={{
-          x: [0, -60, 120, -80, 0],
-          y: [0, 60, -40, 50, 0],
-          scaleX: [1, 1.2, 0.85, 1.1, 1],
-          rotate: [0, 5, -8, 3, 0],
-        }}
-        transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
       />
-
-      {/* Small bright pink pop */}
-      <motion.div
+      <div
         className="absolute w-[250px] h-[250px] rounded-full blur-[60px]"
         style={{
           background: "radial-gradient(circle, #fd79a8, #e84393)",
           top: "15%",
           left: "55%",
-          opacity: 0.35,
+          animation: "aurora-pulse-5 4s ease-in-out infinite -1.5s",
         }}
-        animate={{
-          x: [0, 100, -40, 80, 0],
-          y: [0, -50, 80, -60, 0],
-          scale: [1, 1.4, 0.7, 1.3, 1],
-        }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      {/* ── Light beams that sweep across ── */}
-      <motion.div
-        className="absolute h-[2px] w-[500px] rotate-[18deg]"
-        style={{
-          top: "20%",
-          left: "-10%",
-          background: "linear-gradient(90deg, transparent, #a78bfa99, #e8439966, transparent)",
-        }}
-        animate={{ x: ["-100%", "250vw"] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "linear", delay: 0 }}
-      />
-      <motion.div
-        className="absolute h-[2px] w-[400px] rotate-[-10deg]"
-        style={{
-          top: "50%",
-          right: "-10%",
-          background: "linear-gradient(90deg, transparent, #6c5ce799, #fd79a866, transparent)",
-        }}
-        animate={{ x: ["100%", "-250vw"] }}
-        transition={{ duration: 7, repeat: Infinity, ease: "linear", delay: 2 }}
-      />
-      <motion.div
-        className="absolute h-[1px] w-[350px] rotate-[30deg]"
-        style={{
-          top: "70%",
-          left: "20%",
-          background: "linear-gradient(90deg, transparent, #c4b5fc88, transparent)",
-        }}
-        animate={{ x: ["-100%", "200vw"] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "linear", delay: 4 }}
-      />
-
-      {/* ── Pulsing core glow ── */}
-      <motion.div
+      {/* Pulsing core glow — no blur, scale+opacity is compositor-friendly */}
+      <div
         className="absolute top-[30%] left-[40%] h-[500px] w-[500px] rounded-full"
         style={{
           background: "radial-gradient(circle, rgba(167, 139, 250, 0.3) 0%, transparent 65%)",
+          animation: "aurora-pulse-core 4s ease-in-out infinite",
         }}
-        animate={{
-          scale: [1, 1.4, 1],
-          opacity: [0.5, 1, 0.5],
-        }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      {/* ── Noise texture overlay ── */}
+      {/* Noise texture overlay */}
       <svg className="absolute inset-0 h-full w-full opacity-[0.035]" aria-hidden="true">
         <filter id="hero-noise">
           <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
@@ -174,7 +88,7 @@ function AuroraBackground() {
         <rect width="100%" height="100%" filter="url(#hero-noise)" />
       </svg>
 
-      {/* ── Subtle dot grid ── */}
+      {/* Dot grid */}
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
@@ -262,8 +176,9 @@ export function Hero() {
                   width={1280}
                   height={800}
                   className="w-full h-auto"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   priority
-                  quality={90}
+                  quality={85}
                 />
               </div>
 

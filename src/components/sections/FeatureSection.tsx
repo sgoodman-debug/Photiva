@@ -68,7 +68,8 @@ export function FeatureSection({ feature, reversed = false }: FeatureSectionProp
                   width={1280}
                   height={800}
                   className="w-full h-auto"
-                  quality={90}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={85}
                 />
               </div>
             ) : (

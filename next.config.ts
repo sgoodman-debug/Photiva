@@ -9,6 +9,9 @@ const GUIDE_SLUGS = [
 ];
 
 const nextConfig: NextConfig = {
+  images: {
+    formats: ["image/avif", "image/webp"],
+  },
   async redirects() {
     return GUIDE_SLUGS.map((slug) => ({
       source: `/${slug}`,
