@@ -9,12 +9,6 @@ const GUIDE_SLUGS = [
 ];
 
 const nextConfig: NextConfig = {
-  experimental: {
-    // Inline all CSS into <style> tags at SSR time — works with Turbopack + App Router.
-    // Eliminates the render-blocking <link rel="stylesheet"> entirely.
-    // optimizeCss (critters) is webpack-only and silently no-ops with Turbopack.
-    inlineCss: true,
-  },
   images: {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 31536000,

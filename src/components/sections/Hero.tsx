@@ -123,6 +123,9 @@ export function Hero() {
         imageSizes="(max-width: 1024px) 100vw, 50vw"
         fetchPriority="high"
       />
+      {/* quality intentionally left at default (75) — matches Next.js Image default so
+          the manual preload URLs above exactly match the <img> srcSet URLs generated
+          by Next.js, preventing a double-download (preload + img = wasted request). */}
       <AuroraBackground />
 
       <div className="relative mx-auto max-w-[1200px] px-5 sm:px-6 py-12 md:py-16">
