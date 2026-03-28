@@ -1,4 +1,10 @@
-> 0.5%
-last 2 versions
+# Explicit modern browser floors — covers the realistic audience for a macOS app
+# marketing site and excludes op_mini/kaios/and_qq/and_uc which were forcing
+# core-js to bundle polyfills for Array.at, Object.hasOwn, Object.fromEntries, etc.
+Chrome >= 94
+Firefox >= 93
+Edge >= 94
+Safari >= 16
+iOS >= 16
+Samsung >= 18
 not dead
-not IE 11

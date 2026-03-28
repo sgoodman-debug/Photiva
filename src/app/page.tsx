@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { Hero } from "@/components/sections/Hero";
 import { ProblemSection } from "@/components/sections/ProblemSection";
@@ -9,11 +10,16 @@ import { PrivacySection } from "@/components/sections/PrivacySection";
 import { ComparisonTable } from "@/components/sections/ComparisonTable";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Pricing } from "@/components/sections/Pricing";
-import { FAQ } from "@/components/sections/FAQ";
 import { StatsSummary } from "@/components/sections/StatsSummary";
 import { FooterCTA } from "@/components/sections/FooterCTA";
 import { Section } from "@/components/layout/Section";
 import { faqs, features } from "@/lib/constants";
+
+// FAQ is the only "use client" section on the page (accordion state). Lazy-load
+// its hydration JS so it doesn't land in the critical bundle. SSR is kept on
+// (default) so the HTML and structured-data FAQPage schema are still present on
+// first paint — only the accordion interactivity defers.
+const FAQ = dynamic(() => import("@/components/sections/FAQ").then((m) => ({ default: m.FAQ })));
 
 export const metadata: Metadata = {
   title: "Photiva | Mac Photo Cleaner for Duplicate & Blur",

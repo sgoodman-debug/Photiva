@@ -93,9 +93,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </PostHogProvider>
-        {/* Analytics — afterInteractive must live in <body>, not <head>,
-            so Next.js can apply deferred loading without injecting a
-            blocking synchronous chunk into <head>. */}
+        {/* GA — afterInteractive so the initial pageview fires reliably. */}
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-EZLYFY63MR" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">{`
           window.dataLayer = window.dataLayer || [];
@@ -103,7 +101,10 @@ export default function RootLayout({
           gtag('js', new Date());
           gtag('config', 'G-EZLYFY63MR');
         `}</Script>
-        <Script id="meta-pixel" strategy="afterInteractive">{`
+        {/* Meta Pixel — lazyOnload defers fbevents.js (~98 KiB) until the
+            browser is fully idle, well after LCP. fbq() calls are safe
+            because the stub queues them until fbevents.js resolves. */}
+        <Script id="meta-pixel" strategy="lazyOnload">{`
           !function(f,b,e,v,n,t,s)
           {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
           n.callMethod.apply(n,arguments):n.queue.push(arguments)};

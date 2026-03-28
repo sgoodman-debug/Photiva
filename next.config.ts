@@ -10,9 +10,10 @@ const GUIDE_SLUGS = [
 
 const nextConfig: NextConfig = {
   experimental: {
-    // Inline critical above-the-fold CSS and defer the rest (uses critters).
-    // Eliminates the render-blocking stylesheet on first paint.
-    optimizeCss: true,
+    // Inline all CSS into <style> tags at SSR time — works with Turbopack + App Router.
+    // Eliminates the render-blocking <link rel="stylesheet"> entirely.
+    // optimizeCss (critters) is webpack-only and silently no-ops with Turbopack.
+    inlineCss: true,
   },
   images: {
     formats: ["image/avif", "image/webp"],
@@ -20,6 +21,14 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     return [
+      {
+        // Hashed JS/CSS chunks from Next.js — content-addressed, safe to cache forever.
+        // Netlify also enforces this via netlify.toml [[headers]] for CDN-level caching.
+        source: "/_next/static/:path*",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+        ],
+      },
       {
         // Static assets in /public — long-lived cache (1 year)
         source: "/:path*\\.(jpg|jpeg|png|gif|ico|svg|woff|woff2|ttf|webp|avif)$",
