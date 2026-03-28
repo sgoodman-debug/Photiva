@@ -106,13 +106,20 @@ function AuroraBackground() {
 export function Hero() {
   return (
     <section className="relative overflow-hidden pt-28 pb-20 bg-gradient-hero">
-      {/* Explicit preload for the LCP image. Next.js 16 generates a <link rel="preload">
-          for priority images but with an empty href when using responsive sizes — this
-          overrides it. React 18 hoists <link> elements from Server Components to <head>. */}
+      {/* Manual preload for the LCP image with fetchpriority="high".
+          Two reasons this exists alongside the Next.js-generated preload:
+          1. Next.js 16 + Turbopack does not add fetchpriority="high" to its
+             auto-generated <link rel="preload">, so this carries that signal.
+          2. Ensures quality/URL consistency — Next.js default quality is 75 and
+             the preload URLs must exactly match the <img> srcSet URLs or the
+             browser downloads the image twice (preload + img = wasted request).
+          Quality is intentionally left at the Next.js default (75) here and on
+          the <Image> below so all three sources (preload, img srcset, Next.js
+          auto-preload) resolve to identical URLs. */}
       <link
         rel="preload"
         as="image"
-        imageSrcSet="/_next/image?url=%2Fscreenshots%2Fdashboard.png&w=640&q=85 640w,/_next/image?url=%2Fscreenshots%2Fdashboard.png&w=828&q=85 828w,/_next/image?url=%2Fscreenshots%2Fdashboard.png&w=1080&q=85 1080w,/_next/image?url=%2Fscreenshots%2Fdashboard.png&w=1200&q=85 1200w,/_next/image?url=%2Fscreenshots%2Fdashboard.png&w=1920&q=85 1920w"
+        imageSrcSet="/_next/image?url=%2Fscreenshots%2Fdashboard.png&w=640&q=75 640w,/_next/image?url=%2Fscreenshots%2Fdashboard.png&w=750&q=75 750w,/_next/image?url=%2Fscreenshots%2Fdashboard.png&w=828&q=75 828w,/_next/image?url=%2Fscreenshots%2Fdashboard.png&w=1080&q=75 1080w,/_next/image?url=%2Fscreenshots%2Fdashboard.png&w=1200&q=75 1200w,/_next/image?url=%2Fscreenshots%2Fdashboard.png&w=1920&q=75 1920w"
         imageSizes="(max-width: 1024px) 100vw, 50vw"
         fetchPriority="high"
       />
@@ -191,7 +198,7 @@ export function Hero() {
                   className="w-full h-auto"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   priority
-                  quality={85}
+                  fetchPriority="high"
                 />
               </div>
 
