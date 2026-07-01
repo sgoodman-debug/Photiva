@@ -19,6 +19,28 @@
              ============================================================ -->
 
         <item>
+            <title>Version 1.0.13</title>
+            <description><![CDATA[
+                <h2>What's New in 1.0.13</h2>
+                <ul>
+                    <li>Fixes license activation persistence across app restarts</li>
+                    <li>Restores the last selected Photos Library session on launch</li>
+                    <li>Improves Photos Library duplicate deletion reliability and error reporting</li>
+                </ul>
+            ]]></description>
+            <pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+            <sparkle:version>14</sparkle:version>
+            <sparkle:shortVersionString>1.0.13</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/sgoodman-debug/photivareleases/releases/download/v1.0.13/Photiva-1.0.13.zip"
+                sparkle:edSignature="nj1B0a+N0G1qzufFk3KhuhDiz8p8a+GgsMZKiQYIQNRDeQJ/Pgk0Z1kYzeEhSeaU59utoXHCp9Sejr8fdyhmAg=="
+                length="7981749"
+                type="application/octet-stream"
+            />
+        </item>
+
+        <item>
             <title>Version 1.0.12</title>
             <description><![CDATA[
                 <h2>What's New in 1.0.12</h2>
