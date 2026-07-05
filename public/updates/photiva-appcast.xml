@@ -19,6 +19,28 @@
              ============================================================ -->
 
         <item>
+            <title>Version 1.0.14</title>
+            <description><![CDATA[
+                <h2>What's New in 1.0.14</h2>
+                <ul>
+                    <li>Preserves more photo metadata, including dates, when creating compressed copies</li>
+                    <li>Prevents Photos Library scans from being mixed with Finder or external-drive files</li>
+                    <li>Shows a clear message if you need to clear the current scan before switching source</li>
+                </ul>
+            ]]></description>
+            <pubDate>Sun, 05 Jul 2026 08:35:00 +0000</pubDate>
+            <sparkle:version>15</sparkle:version>
+            <sparkle:shortVersionString>1.0.14</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/sgoodman-debug/photivareleases/releases/download/v1.0.14/Photiva-1.0.14.zip"
+                sparkle:edSignature="dBiNHzgyJjXx/vPMXLK0qdPdCV7ZPyXYkH2V1mMm2IpiyzVmQuXOZISHiKscmhQAa/COdNlWBlW9bYbtTM2SAQ=="
+                length="7994449"
+                type="application/octet-stream"
+            />
+        </item>
+
+        <item>
             <title>Version 1.0.13</title>
             <description><![CDATA[
                 <h2>What's New in 1.0.13</h2>
