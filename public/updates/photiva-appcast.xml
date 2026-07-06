@@ -19,6 +19,28 @@
              ============================================================ -->
 
         <item>
+            <title>Version 1.0.15</title>
+            <description><![CDATA[
+                <h2>What's New in 1.0.15</h2>
+                <ul>
+                    <li>Excludes shared Photos Library items from cleanup scans</li>
+                    <li>Prevents shared iCloud Photos content from appearing in duplicate and similar-photo results</li>
+                    <li>Improves deletion safety by only resolving user-owned Photos Library assets for cleanup actions</li>
+                </ul>
+            ]]></description>
+            <pubDate>Mon, 06 Jul 2026 01:10:00 +0000</pubDate>
+            <sparkle:version>16</sparkle:version>
+            <sparkle:shortVersionString>1.0.15</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/sgoodman-debug/photivareleases/releases/download/v1.0.15/Photiva-1.0.15.zip"
+                sparkle:edSignature="+78BoLS5CWg/yt63waSKxunA0yWUyQbDuL3N+Ehnr7M5IatJ/lUpf4Q6sgmuDZMlU2fOfCsSHCArVaFS3SEjAA=="
+                length="7996629"
+                type="application/octet-stream"
+            />
+        </item>
+
+        <item>
             <title>Version 1.0.14</title>
             <description><![CDATA[
                 <h2>What's New in 1.0.14</h2>
