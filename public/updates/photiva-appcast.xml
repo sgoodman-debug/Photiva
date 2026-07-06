@@ -19,6 +19,28 @@
              ============================================================ -->
 
         <item>
+            <title>Version 1.0.17</title>
+            <description><![CDATA[
+                <h2>What's New in 1.0.17</h2>
+                <ul>
+                    <li>Shows clearer loading progress when importing from Photos Library, albums, folders, drag-and-drop, and side-by-side comparison lists</li>
+                    <li>Adds a progress bar and more helpful status messages while Photiva prepares large photo libraries</li>
+                    <li>Improves perceived responsiveness after imports so the app no longer appears stuck while the grid settles</li>
+                </ul>
+            ]]></description>
+            <pubDate>Mon, 06 Jul 2026 12:44:25 +0000</pubDate>
+            <sparkle:version>18</sparkle:version>
+            <sparkle:shortVersionString>1.0.17</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/sgoodman-debug/photivareleases/releases/download/v1.0.17/Photiva-1.0.17.zip"
+                sparkle:edSignature="hktNdv81A4ITbHs517lNgu+DBpd8cX1WM9SD86qTMZ/6eTOsG3zZdvfbhzL1g9g95lKHL36UZ19vx7MQNuU0AA=="
+                length="8009145"
+                type="application/octet-stream"
+            />
+        </item>
+
+        <item>
             <title>Version 1.0.16</title>
             <description><![CDATA[
                 <h2>What's New in 1.0.16</h2>
