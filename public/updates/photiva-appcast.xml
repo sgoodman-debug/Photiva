@@ -19,6 +19,30 @@
              ============================================================ -->
 
         <item>
+            <title>Version 1.0.20</title>
+            <description><![CDATA[
+                <h2>What's New in 1.0.20</h2>
+                <ul>
+                    <li>Prevents stale preview images from appearing under different filenames after deleting photos from similar-photo groups</li>
+                    <li>Removes invalid one-photo similar groups after deletion, restart, or result restore</li>
+                    <li>Fixes sorted group numbering in All in One review mode</li>
+                    <li>Excludes videos from Similar Photos matching so still photos are compared with still photos</li>
+                    <li>Clears thumbnail cache entries more aggressively after deletes for safer previews</li>
+                </ul>
+            ]]></description>
+            <pubDate>Wed, 08 Jul 2026 00:46:05 +0000</pubDate>
+            <sparkle:version>21</sparkle:version>
+            <sparkle:shortVersionString>1.0.20</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/sgoodman-debug/photivareleases/releases/download/v1.0.20/Photiva-1.0.20.zip"
+                sparkle:edSignature="kvC6jUj+XFjJVdxrYwYPeNDYVw+Z/hNe0w3bMq8s9h15vjU1rDgW8sRi9/imWkPECUecVFRLjSrePjwtD61yDg=="
+                length="8050431"
+                type="application/octet-stream"
+            />
+        </item>
+
+        <item>
             <title>Version 1.0.19</title>
             <description><![CDATA[
                 <h2>What's New in 1.0.19</h2>
