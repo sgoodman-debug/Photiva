@@ -19,6 +19,28 @@
              ============================================================ -->
 
         <item>
+            <title>Version 1.0.21</title>
+            <description><![CDATA[
+                <h2>What's New in 1.0.21</h2>
+                <ul>
+                    <li>Keeps your place in All in One review mode when switching back from One by One or Face to Face</li>
+                    <li>Returns to the selected group, or the next valid group if the original group was removed after deletion</li>
+                    <li>Improves long review sessions so you no longer have to scroll back down from Group 1 after detailed comparisons</li>
+                </ul>
+            ]]></description>
+            <pubDate>Wed, 08 Jul 2026 13:35:35 +0000</pubDate>
+            <sparkle:version>22</sparkle:version>
+            <sparkle:shortVersionString>1.0.21</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/sgoodman-debug/photivareleases/releases/download/v1.0.21/Photiva-1.0.21.zip"
+                sparkle:edSignature="q4aY4WQ//jtQ/iYikKkRij2tGK9w2J0nDI6LmM43RYflkGOlv9TGw+1rgJp9k5SvbtavDE+4fal3lSkr8eKKCg=="
+                length="8056811"
+                type="application/octet-stream"
+            />
+        </item>
+
+        <item>
             <title>Version 1.0.20</title>
             <description><![CDATA[
                 <h2>What's New in 1.0.20</h2>
