@@ -19,6 +19,29 @@
              ============================================================ -->
 
         <item>
+            <title>Version 1.0.22</title>
+            <description><![CDATA[
+                <h2>What's New in 1.0.22</h2>
+                <ul>
+                    <li>Opens photo thumbnails in a much larger zoomable preview, including Blurry Photos and Photo List views</li>
+                    <li>Fixes Show Info so it opens a complete photo information panel</li>
+                    <li>Adds original and physical resource filenames, Photos asset identifiers, dimensions, dates, camera details, and location information</li>
+                    <li>Adds consistent context-menu actions to Photo List rows</li>
+                </ul>
+            ]]></description>
+            <pubDate>Thu, 09 Jul 2026 00:46:09 +0000</pubDate>
+            <sparkle:version>23</sparkle:version>
+            <sparkle:shortVersionString>1.0.22</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/sgoodman-debug/photivareleases/releases/download/v1.0.22/Photiva-1.0.22.zip"
+                sparkle:edSignature="71165nzXT+gGqx0XWE9/VLJdit3vsMNttQhE+Qa0GUJE3h81e329m+tNgzIgIgGWn60N2pNRBbS7DDY7Z1G/Dg=="
+                length="8117653"
+                type="application/octet-stream"
+            />
+        </item>
+
+        <item>
             <title>Version 1.0.21</title>
             <description><![CDATA[
                 <h2>What's New in 1.0.21</h2>
