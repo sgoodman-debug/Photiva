@@ -19,6 +19,29 @@
              ============================================================ -->
 
         <item>
+            <title>Version 1.0.24</title>
+            <description><![CDATA[
+                <h2>What's New in 1.0.24</h2>
+                <ul>
+                    <li>Adds visible zoom-in and zoom-out controls with a live zoom percentage</li>
+                    <li>Adds clear mouse instructions for zooming and dragging to pan</li>
+                    <li>Keeps zoomed photos safely inside the image area so they cannot cover controls or metadata</li>
+                    <li>Adds comfortable spacing around preview content and clarifies the Reset View action</li>
+                </ul>
+            ]]></description>
+            <pubDate>Thu, 09 Jul 2026 01:22:48 +0000</pubDate>
+            <sparkle:version>25</sparkle:version>
+            <sparkle:shortVersionString>1.0.24</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/sgoodman-debug/photivareleases/releases/download/v1.0.24/Photiva-1.0.24.zip"
+                sparkle:edSignature="r5K3ACDl6xUFN9SmagfdiW1dwA8ghdBCBiVo5vmk6OfWDl2kItxaHJt4/ZnGcRn5hfjn3LNaqStUalvvztdNCg=="
+                length="8137494"
+                type="application/octet-stream"
+            />
+        </item>
+
+        <item>
             <title>Version 1.0.23</title>
             <description><![CDATA[
                 <h2>What's New in 1.0.23</h2>
