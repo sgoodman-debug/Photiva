@@ -19,6 +19,28 @@
              ============================================================ -->
 
         <item>
+            <title>Version 1.0.23</title>
+            <description><![CDATA[
+                <h2>What's New in 1.0.23</h2>
+                <ul>
+                    <li>Fixes the large photo preview repeatedly opening and closing instead of loading</li>
+                    <li>Adds clear Close buttons to large photo previews and photo information panels</li>
+                    <li>Allows Escape to close either preview window</li>
+                </ul>
+            ]]></description>
+            <pubDate>Thu, 09 Jul 2026 01:00:19 +0000</pubDate>
+            <sparkle:version>24</sparkle:version>
+            <sparkle:shortVersionString>1.0.23</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/sgoodman-debug/photivareleases/releases/download/v1.0.23/Photiva-1.0.23.zip"
+                sparkle:edSignature="mtyjiERGmK8NpWZayh9BveKTiBGCsr+DvaYWBQPdxy7WwcGujWW4p5LblkJ1FFdmgPNRf9DBg2BC+8Nwky5fDQ=="
+                length="8127648"
+                type="application/octet-stream"
+            />
+        </item>
+
+        <item>
             <title>Version 1.0.22</title>
             <description><![CDATA[
                 <h2>What's New in 1.0.22</h2>
