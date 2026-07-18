@@ -121,7 +121,7 @@ export default function DownloadPage() {
 
             <FadeIn delay={0.25}>
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button as="a" href={DOWNLOAD_URL} size="lg" className="w-full sm:w-auto px-10">
+                <Button as="a" href={DOWNLOAD_URL} size="lg" className="w-full sm:w-auto px-10" trackingLocation="download_page_hero_download">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                     <polyline points="7 10 12 15 17 10" />
@@ -129,7 +129,7 @@ export default function DownloadPage() {
                   </svg>
                   Free Download &amp; Scan
                 </Button>
-                <Button as="a" href={BUY_URL} variant="secondary" size="lg" className="w-full sm:w-auto px-10">
+                <Button as="a" href={BUY_URL} variant="secondary" size="lg" className="w-full sm:w-auto px-10" trackingLocation="download_page_hero_purchase">
                   Buy Now · $29.99
                 </Button>
               </div>
@@ -220,7 +220,7 @@ export default function DownloadPage() {
                 ))}
               </ul>
               <div className="mt-8">
-                <Button as="a" href={DOWNLOAD_URL} size="lg" className="w-full">
+                <Button as="a" href={DOWNLOAD_URL} size="lg" className="w-full" trackingLocation="download_page_free_card">
                   Download Free
                 </Button>
               </div>
@@ -251,7 +251,7 @@ export default function DownloadPage() {
                   ))}
                 </ul>
                 <div className="mt-8">
-                  <Button as="a" href={BUY_URL} size="lg" className="w-full">
+                  <Button as="a" href={BUY_URL} size="lg" className="w-full" trackingLocation="download_page_paid_card">
                     Buy Now · $29.99
                   </Button>
                 </div>
@@ -328,7 +328,7 @@ export default function DownloadPage() {
               Just a cleaner, faster photo library.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button as="a" href={DOWNLOAD_URL} size="lg" className="w-full sm:w-auto px-10">
+              <Button as="a" href={DOWNLOAD_URL} size="lg" className="w-full sm:w-auto px-10" trackingLocation="download_page_footer_download">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                   <polyline points="7 10 12 15 17 10" />
@@ -336,7 +336,7 @@ export default function DownloadPage() {
                 </svg>
                 Free Download &amp; Scan
               </Button>
-              <Button as="a" href={BUY_URL} variant="secondary" size="lg" className="w-full sm:w-auto px-10">
+              <Button as="a" href={BUY_URL} variant="secondary" size="lg" className="w-full sm:w-auto px-10" trackingLocation="download_page_footer_purchase">
                 Buy Now · $29.99
               </Button>
             </div>

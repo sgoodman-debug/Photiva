@@ -18,7 +18,7 @@ export function FooterCTA() {
         </FadeIn>
         <FadeIn delay={0.2}>
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">
-            <Button as="a" href="/download" size="lg">
+            <Button as="a" href="/download" size="lg" trackingLocation="home_footer">
               Free Download &amp; Scan
             </Button>
           </div>

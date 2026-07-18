@@ -173,10 +173,10 @@ export function Hero() {
 
             <div style={fadeUp(0.4)}>
               <div className="mt-10 flex flex-col sm:flex-row gap-3">
-                <Button as="a" href="/download" size="lg">
+                <Button as="a" href="/download" size="lg" trackingLocation="home_hero">
                   Free Download &amp; Scan
                 </Button>
-                <Button as="a" href="/#how-it-works" variant="secondary" size="lg">
+                <Button as="a" href="/#how-it-works" variant="secondary" size="lg" trackingLocation="home_hero_secondary">
                   See How It Works
                 </Button>
               </div>

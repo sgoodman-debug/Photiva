@@ -47,7 +47,7 @@ export function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <Button as="a" href="/download" size="sm">
+          <Button as="a" href="/download" size="sm" trackingLocation="navbar_desktop">
             Free Download &amp; Scan
           </Button>
         </div>
@@ -92,7 +92,7 @@ export function Navbar() {
               </a>
             ))}
             <div className="pt-2">
-              <Button as="a" href="/download" size="sm" className="w-full">
+              <Button as="a" href="/download" size="sm" className="w-full" trackingLocation="navbar_mobile">
                 Free Download &amp; Scan
               </Button>
             </div>

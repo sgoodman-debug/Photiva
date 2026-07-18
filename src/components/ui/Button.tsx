@@ -2,11 +2,22 @@
 
 import { type ButtonHTMLAttributes, type MouseEvent } from "react";
 
+declare global {
+  interface Window {
+    fbq?: (
+      action: "track" | "trackCustom",
+      eventName: string,
+      params?: Record<string, string | number | boolean | undefined>
+    ) => void;
+  }
+}
+
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "ghost";
   size?: "sm" | "md" | "lg";
   as?: "button" | "a";
   href?: string;
+  trackingLocation?: string;
 }
 
 const variantClasses = {
@@ -31,19 +42,57 @@ export function Button({
   children,
   as = "button",
   href,
+  trackingLocation,
   ...props
 }: ButtonProps) {
   const classes = `inline-flex items-center justify-center gap-2 rounded-xl font-display font-semibold tracking-[-0.01em] transition-all duration-200 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 
   function trackClick(e: MouseEvent) {
     const label = (e.currentTarget as HTMLElement).textContent?.trim() || "";
+    const destination = href || undefined;
+    const isPurchase = destination?.includes("store.appiva.app/checkout/buy") ?? false;
+    const isDirectDownload = destination?.includes("/Photiva.dmg") ?? false;
+    const isDownloadPage = destination === "/download" || destination?.endsWith("/download");
+    const eventName = isPurchase
+      ? "purchase_clicked"
+      : isDirectDownload || isDownloadPage
+        ? "download_clicked"
+        : "cta_clicked";
+
     import("posthog-js").then(({ default: posthog }) => {
-      posthog.capture("cta_clicked", {
+      posthog.capture(eventName, {
         label,
-        href: href || undefined,
+        href: destination,
         variant,
+        location: trackingLocation,
+        destination_type: isPurchase
+          ? "checkout"
+          : isDirectDownload
+            ? "dmg_download"
+            : isDownloadPage
+              ? "download_page"
+              : "other",
+      }, {
+        transport: "sendBeacon",
       });
     });
+
+    if (typeof window !== "undefined" && window.fbq) {
+      const metaPayload = {
+        content_name: label,
+        destination_url: destination,
+        location: trackingLocation,
+      };
+
+      if (isPurchase) {
+        window.fbq("track", "InitiateCheckout", metaPayload);
+      } else if (isDirectDownload || isDownloadPage) {
+        window.fbq("trackCustom", "DownloadClicked", {
+          ...metaPayload,
+          destination_type: isDirectDownload ? "dmg_download" : "download_page",
+        });
+      }
+    }
   }
 
   if (as === "a" && href) {
