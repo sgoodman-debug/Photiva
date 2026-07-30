@@ -19,6 +19,28 @@
              ============================================================ -->
 
         <item>
+            <title>Version 1.0.28</title>
+            <description><![CDATA[
+                <h2>What's New in 1.0.28</h2>
+                <ul>
+                    <li>Emergency stability rollback for large-library browsing</li>
+                    <li>Removes the aggressive thumbnail prefetch pipeline that could make Photiva unresponsive while scrolling or switching views</li>
+                    <li>Restores the last known safer thumbnail loading behavior while we prepare a properly profiled large-library performance update</li>
+                </ul>
+            ]]></description>
+            <pubDate>Thu, 30 Jul 2026 23:13:17 +0000</pubDate>
+            <sparkle:version>29</sparkle:version>
+            <sparkle:shortVersionString>1.0.28</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/sgoodman-debug/photivareleases/releases/download/v1.0.28/Photiva-1.0.28.zip"
+                sparkle:edSignature="feH/wiio/xSstomhbvz1TW+z/Y90L8WXaiVbFql4NK29jZ1tUbwwAO+8od0Ub9/dJAwsNk6/JvmMbY/S8PeyDw=="
+                length="8215520"
+                type="application/octet-stream"
+            />
+        </item>
+
+        <item>
             <title>Version 1.0.27</title>
             <description><![CDATA[
                 <h2>What's New in 1.0.27</h2>
