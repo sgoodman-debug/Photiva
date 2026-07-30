@@ -19,6 +19,28 @@
              ============================================================ -->
 
         <item>
+            <title>Version 1.0.25</title>
+            <description><![CDATA[
+                <h2>What's New in 1.0.25</h2>
+                <ul>
+                    <li>Improves scrolling performance in large photo sets by loading lightweight thumbnails instead of full-size originals</li>
+                    <li>Applies safer thumbnail loading across Photo Browser, Blurry Photos, Compression, cleanup views, review strips, memories, and vault previews</li>
+                    <li>Reduces repeated Photos Library lookups while scrolling to avoid beachballing on large libraries</li>
+                </ul>
+            ]]></description>
+            <pubDate>Thu, 30 Jul 2026 21:15:12 +0000</pubDate>
+            <sparkle:version>26</sparkle:version>
+            <sparkle:shortVersionString>1.0.25</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/sgoodman-debug/photivareleases/releases/download/v1.0.25/Photiva-1.0.25.zip"
+                sparkle:edSignature="jIRKToJEDFuuUoqVScNl3sC15+sKz0I+suA6On3DdQVWbkqq+ox5O2dtg+uyuhdemz9TiGwa5KA4o3MKZ9UZCg=="
+                length="8215535"
+                type="application/octet-stream"
+            />
+        </item>
+
+        <item>
             <title>Version 1.0.24</title>
             <description><![CDATA[
                 <h2>What's New in 1.0.24</h2>
