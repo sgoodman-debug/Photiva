@@ -19,6 +19,29 @@
              ============================================================ -->
 
         <item>
+            <title>Version 1.0.26</title>
+            <description><![CDATA[
+                <h2>What's New in 1.0.26</h2>
+                <ul>
+                    <li>Improves scrolling performance across large photo libraries and cleanup views</li>
+                    <li>Adds native Photos Library thumbnail preheating using Apple's caching image manager</li>
+                    <li>Shares thumbnail loading across grids, lists, compression, memories, marked photos, and result review strips</li>
+                    <li>Reduces duplicate thumbnail work so the app feels smoother while moving through thousands of photos</li>
+                </ul>
+            ]]></description>
+            <pubDate>Thu, 30 Jul 2026 22:27:14 +0000</pubDate>
+            <sparkle:version>27</sparkle:version>
+            <sparkle:shortVersionString>1.0.26</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/sgoodman-debug/photivareleases/releases/download/v1.0.26/Photiva-1.0.26.zip"
+                sparkle:edSignature="UPZRgtpwFwPUQ8WmQHkK3MRxanwbvckq+URGdwuehdOuv0BdOHq0QKiyf+sY0CtOFNEgVc4TAOxFdGzkEviKDA=="
+                length="8250814"
+                type="application/octet-stream"
+            />
+        </item>
+
+        <item>
             <title>Version 1.0.25</title>
             <description><![CDATA[
                 <h2>What's New in 1.0.25</h2>
