@@ -19,6 +19,28 @@
              ============================================================ -->
 
         <item>
+            <title>Version 1.0.27</title>
+            <description><![CDATA[
+                <h2>What's New in 1.0.27</h2>
+                <ul>
+                    <li>Stability hotfix for large-library scrolling</li>
+                    <li>Disables overly aggressive background thumbnail prefetching that could cause beachballing or leave views stuck on placeholders</li>
+                    <li>Keeps the safer lightweight thumbnail loading and shared request handling introduced for large libraries</li>
+                </ul>
+            ]]></description>
+            <pubDate>Thu, 30 Jul 2026 23:04:13 +0000</pubDate>
+            <sparkle:version>28</sparkle:version>
+            <sparkle:shortVersionString>1.0.27</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/sgoodman-debug/photivareleases/releases/download/v1.0.27/Photiva-1.0.27.zip"
+                sparkle:edSignature="uzHp5gty30YvLXqDJQQngjUrbs0n/E6lLe3rw7z3ZnO6kj+sOFn9Xi7GFiQbztENKq0sOL/r61kP55o9JT6pAg=="
+                length="8238004"
+                type="application/octet-stream"
+            />
+        </item>
+
+        <item>
             <title>Version 1.0.26</title>
             <description><![CDATA[
                 <h2>What's New in 1.0.26</h2>
