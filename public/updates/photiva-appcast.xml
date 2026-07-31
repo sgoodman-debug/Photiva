@@ -23,9 +23,9 @@
             <description><![CDATA[
                 <h2>What's New in 1.0.28</h2>
                 <ul>
-                    <li>Emergency stability rollback for large-library browsing</li>
-                    <li>Removes the aggressive thumbnail prefetch pipeline that could make Photiva unresponsive while scrolling or switching views</li>
-                    <li>Restores the last known safer thumbnail loading behavior while we prepare a properly profiled large-library performance update</li>
+                    <li>Improves reliability when browsing very large photo libraries</li>
+                    <li>Improves responsiveness when scrolling through photos and switching between sections</li>
+                    <li>Includes additional stability improvements for thumbnail loading</li>
                 </ul>
             ]]></description>
             <pubDate>Thu, 30 Jul 2026 23:13:17 +0000</pubDate>
