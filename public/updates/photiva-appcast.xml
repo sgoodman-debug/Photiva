@@ -19,29 +19,6 @@
              ============================================================ -->
 
         <item>
-            <title>Version 1.0.29</title>
-            <description><![CDATA[
-                <h2>What's New in 1.0.29</h2>
-                <ul>
-                    <li>Improves stability and responsiveness when working with very large photo libraries</li>
-                    <li>Adds a choice at launch to restore a saved library or open the Dashboard without loading it</li>
-                    <li>Improves Photos Library media handling, video thumbnails, and compression workflows</li>
-                    <li>Includes additional reliability improvements across cleanup and comparison views</li>
-                </ul>
-            ]]></description>
-            <pubDate>Fri, 31 Jul 2026 22:04:27 +0000</pubDate>
-            <sparkle:version>30</sparkle:version>
-            <sparkle:shortVersionString>1.0.29</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure
-                url="https://github.com/sgoodman-debug/photivareleases/releases/download/v1.0.29/Photiva-1.0.29.zip"
-                sparkle:edSignature="IrqzCvEV0jET25SUeB1b9i5A5izDsfgV1vwnZpLTp7p4r/KiH+Q3qK9P4r78GKwGZeupdfH4M0fP408onMhrDg=="
-                length="8265016"
-                type="application/octet-stream"
-            />
-        </item>
-
-        <item>
             <title>Version 1.0.28</title>
             <description><![CDATA[
                 <h2>What's New in 1.0.28</h2>
