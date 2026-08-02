@@ -19,6 +19,29 @@
              ============================================================ -->
 
         <item>
+            <title>Version 1.0.31</title>
+            <description><![CDATA[
+                <h2>What's New in 1.0.31</h2>
+                <ul>
+                    <li>Improves reliability when restoring large saved libraries, including retained access to selected folders</li>
+                    <li>Makes exact-duplicate scans start fresh from the selected source rather than reopening stale results</li>
+                    <li>Improves large-library cleanup analysis with safer image handling, reusable analysis resources, and cached results for later scans</li>
+                    <li>Includes further stability fixes for Photos Library loading, thumbnails, and cleanup results</li>
+                </ul>
+            ]]></description>
+            <pubDate>Sun, 02 Aug 2026 04:24:48 +0000</pubDate>
+            <sparkle:version>32</sparkle:version>
+            <sparkle:shortVersionString>1.0.31</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/sgoodman-debug/photivareleases/releases/download/v1.0.31/Photiva-1.0.31.zip"
+                sparkle:edSignature="bsFJOxxaRkryDWk7Un3Oj3fKrJz56sywhwlBkund1Da0VcRSj2lFB2lJBBROinSpk3mK4Es+m9MwpNxHWdEMAQ=="
+                length="8394244"
+                type="application/octet-stream"
+            />
+        </item>
+
+        <item>
             <title>Version 1.0.30</title>
             <description><![CDATA[
                 <h2>What's New in 1.0.30</h2>
