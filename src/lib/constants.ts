@@ -1,4 +1,4 @@
-import type { Feature, FAQ, Testimonial, ComparisonRow, ProblemCard, Step, CapabilityItem } from "@/types";
+import type { Feature, FAQ, ComparisonRow, ProblemCard, Step, CapabilityItem } from "@/types";
 
 export const problemCards: ProblemCard[] = [
   {
@@ -117,27 +117,6 @@ export const comparisonRows: ComparisonRow[] = [
   { feature: "100% on-device processing", photiva: "Yes", subscriptionApps: "No", freeTools: "Partial" },
   { feature: "Rollback / undo", photiva: "Yes", subscriptionApps: "No", freeTools: "No" },
   { feature: "RAW + sidecar support", photiva: "Yes", subscriptionApps: "Partial", freeTools: "No" },
-];
-
-export const testimonials: Testimonial[] = [
-  {
-    quote:
-      "I recovered over 45 GB of storage just from duplicates and old screenshots. Photiva found things I'd been ignoring for years.",
-    name: "Alex Chen",
-    role: "Photographer",
-  },
-  {
-    quote:
-      "10 years of family photos finally organized into folders I can actually browse. My wife thinks I spent the whole weekend doing it. Took me 20 minutes.",
-    name: "Sarah Mitchell",
-    role: "Parent of three",
-  },
-  {
-    quote:
-      "I use it after every client shoot to clean up rejected shots and organize deliverables. The RAW + sidecar handling alone is worth the price.",
-    name: "James Rivera",
-    role: "Professional photographer",
-  },
 ];
 
 export const faqs: FAQ[] = [

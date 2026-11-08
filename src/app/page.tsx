@@ -8,7 +8,6 @@ import { CapabilityGrid } from "@/components/sections/CapabilityGrid";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { PrivacySection } from "@/components/sections/PrivacySection";
 import { ComparisonTable } from "@/components/sections/ComparisonTable";
-import { Testimonials } from "@/components/sections/Testimonials";
 import { Pricing } from "@/components/sections/Pricing";
 import { StatsSummary } from "@/components/sections/StatsSummary";
 import { FooterCTA } from "@/components/sections/FooterCTA";
@@ -159,7 +158,6 @@ export default function Home() {
       <HowItWorks />
       <PrivacySection />
       <ComparisonTable />
-      <Testimonials />
       <Pricing />
       <Section background="muted">
         <div className="mx-auto max-w-3xl text-center">

@@ -13,12 +13,6 @@ export interface FAQ {
   answer: string;
 }
 
-export interface Testimonial {
-  quote: string;
-  name: string;
-  role: string;
-}
-
 export interface ComparisonRow {
   feature: string;
   photiva: "Yes" | "Partial" | "No";
