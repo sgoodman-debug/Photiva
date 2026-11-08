@@ -140,7 +140,7 @@ export function Hero() {
 
             <div style={fadeUp(0.2)}>
               <h1 className="font-display text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-[-0.04em] text-foreground leading-[1.05]">
-                Reclaim Your Mac&apos;s Storage.
+                Reclaim Your Mac&apos;s Storage.{" "}
                 <br />
                 Remove Duplicates. Organize Years of Photos.
               </h1>

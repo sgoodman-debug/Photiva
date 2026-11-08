@@ -1,7 +1,16 @@
 import Link from "next/link";
 import { Section } from "@/components/layout/Section";
 import { Button } from "@/components/ui/Button";
-import { getGuide, guideOrder, guideLabels, type GuideSlug, buildGuideSchema } from "@/lib/seo-guides";
+import { getGuide, guideOrder, guideLabels, guideDates, type GuideSlug, buildGuideSchema } from "@/lib/seo-guides";
+
+function formatDate(iso: string) {
+  return new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC",
+  });
+}
 
 interface GuidePageProps {
   slug: GuideSlug;
@@ -26,6 +35,10 @@ export function GuidePage({ slug }: GuidePageProps) {
         <h1 className="font-display text-4xl sm:text-5xl font-extrabold tracking-[-0.03em] text-foreground leading-tight max-w-4xl">
           {guide.h1}
         </h1>
+        <p className="mt-4 text-sm text-muted">
+          Last updated{" "}
+          <time dateTime={guideDates[slug].modified}>{formatDate(guideDates[slug].modified)}</time>
+        </p>
       </Section>
 
       <Section background="muted">

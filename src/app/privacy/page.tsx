@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Photiva",
+  title: "Privacy Policy",
   description:
     "Photiva Privacy Policy. Learn how we protect your data with 100% on-device processing, no cloud uploads, and no tracking.",
   alternates: {

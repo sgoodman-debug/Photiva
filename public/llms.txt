@@ -1,0 +1,32 @@
+# Photiva
+
+> Photiva is a native macOS app that cleans up photo libraries. It finds exact duplicates, similar shots and blurry photos, organises Apple Photos and photo folders, and runs entirely on the Mac with no cloud uploads, accounts or telemetry. Scanning is free; a one-time US$29.99 purchase unlocks cleanup. No subscription.
+
+Key facts:
+
+- Platform: macOS 14 Sonoma or later, Universal (Apple Silicon and Intel)
+- Price: free download and full scan; US$29.99 one-time to unlock cleanup, organisation and compression
+- Privacy: all processing happens on-device; nothing is uploaded
+- Safety: deleted files go to the Trash, and organisation changes can be rolled back within 30 days
+- Works with: Apple Photos libraries, locally synced iCloud photos and any folder on the Mac
+- Formats: JPEG, PNG, HEIF/HEIC, TIFF, BMP, GIF, WebP, RAW (DNG, CR2, CR3, NEF, ARW, ORF, RW2, RAF, PEF, SRW) and video (MOV, MP4, M4V, AVI)
+- Detects: exact duplicates, near-duplicate and burst shots, blurry photos (sharpness scoring), screenshots
+- Compared with alternatives: Gemini 2 and CleanMyMac are subscriptions; Photiva is a one-time purchase that covers duplicates, blur, organisation and compression in one app
+
+## Main pages
+
+- [Home](https://photiva.app/): what Photiva does, features, pricing and FAQ
+- [Download](https://photiva.app/download): download the free scanner and pricing details
+
+## Guides
+
+- [Remove duplicate photos on Mac](https://photiva.app/guides/remove-duplicate-photos-mac): how to find and remove duplicates without deleting the wrong shots
+- [Find blurry photos on Mac](https://photiva.app/guides/find-blurry-photos-mac): how to detect blurry photos and keep the sharp ones
+- [Organize Apple Photos library](https://photiva.app/guides/organize-apple-photos-library): a library structure you can maintain
+- [Best Mac photo cleaner: what to look for](https://photiva.app/guides/mac-photo-cleaner): criteria for choosing a Mac photo cleaner
+- [Photiva vs Gemini 2](https://photiva.app/guides/photiva-vs-gemini): side-by-side comparison
+
+## Optional
+
+- [Privacy policy](https://photiva.app/privacy)
+- [Terms](https://photiva.app/terms)

@@ -40,6 +40,26 @@ interface GuideData {
 
 const realRating: { value: string; count: string } | null = null;
 
+/**
+ * Real publish and last content-change dates for each guide (ISO dates).
+ * Update `modified` only when a guide's content genuinely changes: it feeds
+ * the visible "Last updated" line, Article schema and the sitemap.
+ */
+export const guideDates: Record<GuideSlug, { published: string; modified: string }> = {
+  "remove-duplicate-photos-mac": { published: "2026-03-01", modified: "2026-03-01" },
+  "find-blurry-photos-mac": { published: "2026-03-01", modified: "2026-03-01" },
+  "organize-apple-photos-library": { published: "2026-03-01", modified: "2026-03-01" },
+  "mac-photo-cleaner": { published: "2026-03-01", modified: "2026-03-01" },
+  "photiva-vs-gemini": { published: "2026-03-01", modified: "2026-03-01" },
+};
+
+/** Guides that walk through steps get HowTo schema; comparisons and buyer guides do not. */
+const howToGuides: ReadonlySet<GuideSlug> = new Set<GuideSlug>([
+  "remove-duplicate-photos-mac",
+  "find-blurry-photos-mac",
+  "organize-apple-photos-library",
+]);
+
 export const guideOrder: GuideSlug[] = [
   "remove-duplicate-photos-mac",
   "find-blurry-photos-mac",
@@ -60,7 +80,7 @@ export const guideData: Record<GuideSlug, GuideData> = {
   "remove-duplicate-photos-mac": {
     slug: "remove-duplicate-photos-mac",
     primaryKeyword: "remove duplicate photos mac",
-    title: "Remove Duplicate Photos on Mac | Photiva Guide",
+    title: "Remove Duplicate Photos on Mac Safely: Step-by-Step Guide",
     description:
       "Learn how to remove duplicate photos on Mac with a safe manual workflow and a faster on-device Photiva method for accurate cleanup and safer long-term control.",
     h1: "How to Remove Duplicate Photos on Mac Without Deleting the Wrong Shots",
@@ -211,7 +231,7 @@ export const guideData: Record<GuideSlug, GuideData> = {
   "find-blurry-photos-mac": {
     slug: "find-blurry-photos-mac",
     primaryKeyword: "find blurry photos mac",
-    title: "Find Blurry Photos on Mac | Photiva Guide",
+    title: "Find Blurry Photos on Mac and Keep the Sharp Ones",
     description:
       "Find blurry photos on Mac with a practical quality workflow. Compare manual review limits against Photiva blur detection, safer cleanup decisions, and upkeep.",
     h1: "How to Find Blurry Photos on Mac and Keep Only Sharp Shots",
@@ -369,7 +389,7 @@ export const guideData: Record<GuideSlug, GuideData> = {
   "organize-apple-photos-library": {
     slug: "organize-apple-photos-library",
     primaryKeyword: "organize apple photos library",
-    title: "Organize Apple Photos Library | Photiva Guide",
+    title: "Organize Your Apple Photos Library: A System That Lasts",
     description:
       "Organize Apple Photos library with a repeatable system. Learn manual steps, common bottlenecks, and how Photiva automates structure, event grouping, and cleanup",
     h1: "How to Organize Apple Photos Library Into a System You Can Maintain",
@@ -534,7 +554,7 @@ export const guideData: Record<GuideSlug, GuideData> = {
   "mac-photo-cleaner": {
     slug: "mac-photo-cleaner",
     primaryKeyword: "mac photo cleaner",
-    title: "Mac Photo Cleaner Guide | Photiva",
+    title: "Best Mac Photo Cleaner: What to Look For",
     description:
       "Choosing a Mac photo cleaner? Compare manual cleanup with Photiva's local-first workflow for duplicates, blur filtering, organization, and storage recovery.",
     h1: "What Makes the Best Mac Photo Cleaner for Real Library Cleanup",
@@ -699,7 +719,7 @@ export const guideData: Record<GuideSlug, GuideData> = {
   "photiva-vs-gemini": {
     slug: "photiva-vs-gemini",
     primaryKeyword: "photiva vs gemini 2",
-    title: "Photiva vs Gemini 2 | Detailed Comparison",
+    title: "Photiva vs Gemini 2: Detailed Comparison",
     description:
       "Photiva vs Gemini 2 comparison for Mac users who need duplicate cleanup plus blur detection, organization depth, and a privacy-first workflow for monthly use.",
     h1: "Photiva vs Gemini 2: Which Mac Photo Cleanup Workflow Is More Complete?",
@@ -885,6 +905,8 @@ export function buildGuideMetadata(guide: GuideData): Metadata {
       ],
       type: "article",
       locale: "en_US",
+      publishedTime: guideDates[guide.slug].published,
+      modifiedTime: guideDates[guide.slug].modified,
     },
     twitter: {
       card: "summary_large_image",
@@ -981,7 +1003,29 @@ export function buildGuideSchema(guide: GuideData) {
     };
   }
 
-  return [softwareApplication, product, faqPage, howTo];
+  const dates = guideDates[guide.slug];
+  const article = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: guide.h1,
+    description: guide.description,
+    url: pageUrl,
+    mainEntityOfPage: pageUrl,
+    image: `${SITE_URL}/og-image.png`,
+    datePublished: dates.published,
+    dateModified: dates.modified,
+    author: { "@type": "Organization", name: "Photiva", url: SITE_URL },
+    publisher: {
+      "@type": "Organization",
+      name: "Photiva",
+      url: SITE_URL,
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/app-icon.png` },
+    },
+  };
+
+  const schemas: Record<string, unknown>[] = [article, softwareApplication, product, faqPage];
+  if (howToGuides.has(guide.slug)) schemas.push(howTo);
+  return schemas;
 }
 
 export function getGuide(slug: GuideSlug): GuideData {

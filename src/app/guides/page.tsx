@@ -31,7 +31,7 @@ const guides = [
 ];
 
 export const metadata: Metadata = {
-  title: "Photiva Guides | Mac Photo Cleanup Help",
+  title: "Mac Photo Cleanup Guides",
   description:
     "Browse Photiva guides for duplicate cleanup, blurry photo detection, Apple Photos organization, and tool comparisons on macOS.",
   alternates: {

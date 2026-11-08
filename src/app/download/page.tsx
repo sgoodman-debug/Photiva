@@ -8,7 +8,7 @@ const DOWNLOAD_URL = "https://github.com/sgoodman-debug/photivareleases/releases
 const BUY_URL = "https://store.appiva.app/checkout/buy/9ccb153d-2370-4663-bef7-c9ba8658fac5";
 
 export const metadata: Metadata = {
-  title: "Download Photiva | Free Mac Photo Cleaner",
+  title: { absolute: "Download Photiva | Free Mac Photo Cleaner" },
   description:
     "Download Photiva free and scan your entire Mac photo library. Find duplicates, blurry photos, and similar images. Unlock full cleanup for $29.99 one-time.",
   alternates: { canonical: "/download" },

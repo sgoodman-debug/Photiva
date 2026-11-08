@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | Photiva",
+  title: "Terms & Conditions",
   description:
     "Photiva Terms and Conditions. Read about the terms governing your use of the Photiva macOS application.",
   alternates: {
