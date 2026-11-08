@@ -1,9 +1,11 @@
 "use client";
 
 import { type ButtonHTMLAttributes, type MouseEvent } from "react";
+import { withCheckoutSource } from "@/lib/attribution";
 
 declare global {
   interface Window {
+    gtag?: (command: "event", eventName: string, params?: Record<string, string | number | boolean | undefined>) => void;
     fbq?: (
       action: "track" | "trackCustom",
       eventName: string,
@@ -76,6 +78,27 @@ export function Button({
         transport: "sendBeacon",
       });
     });
+
+    // Pass the visitor's source to Lemon Squeezy so the order records it.
+    if (isPurchase && destination && e.currentTarget instanceof HTMLAnchorElement) {
+      e.currentTarget.href = withCheckoutSource(destination);
+    }
+
+    // GA4 events, imported into Google Ads and Microsoft Ads as conversions.
+    // photiva_download fires only for the actual app download, not for links
+    // to the /download page.
+    if (typeof window !== "undefined" && window.gtag) {
+      if (isDirectDownload) {
+        window.gtag("event", "photiva_download", { location: trackingLocation, transport_type: "beacon" });
+      } else if (isPurchase) {
+        window.gtag("event", "begin_checkout", {
+          currency: "USD",
+          value: 29.99,
+          location: trackingLocation,
+          transport_type: "beacon",
+        });
+      }
+    }
 
     if (typeof window !== "undefined" && window.fbq) {
       const metaPayload = {
