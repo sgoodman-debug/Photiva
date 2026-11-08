@@ -4,6 +4,11 @@ import { Section } from "@/components/layout/Section";
 
 const guides = [
   {
+    href: "/guides/best-duplicate-photo-finder-mac",
+    title: "Best Duplicate Photo Finder for Mac (2026)",
+    description: "An honest comparison of Apple Photos, Photiva, PhotoSweeper, Gemini 2 and CleanMyMac, with prices and who each suits.",
+  },
+  {
     href: "/guides/remove-duplicate-photos-mac",
     title: "Remove Duplicate Photos on Mac",
     description: "Learn a safe workflow for finding exact and similar duplicates before deleting anything.",

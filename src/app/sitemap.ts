@@ -6,8 +6,9 @@ const HOME_MODIFIED = "2026-11-08";
 const DOWNLOAD_MODIFIED = "2026-07-19";
 const LEGAL_MODIFIED = "2026-03-01";
 
-const latestGuideChange = guideOrder
-  .map((slug) => guideDates[slug].modified)
+const COMPARISON_MODIFIED = "2026-11-08";
+
+const latestGuideChange = [...guideOrder.map((slug) => guideDates[slug].modified), COMPARISON_MODIFIED]
   .sort()
   .at(-1)!;
 
@@ -30,6 +31,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(latestGuideChange),
       changeFrequency: "weekly",
       priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/guides/best-duplicate-photo-finder-mac`,
+      lastModified: new Date(COMPARISON_MODIFIED),
+      changeFrequency: "monthly",
+      priority: 0.9,
     },
     ...guideOrder.map((slug) => ({
       url: `${SITE_URL}/guides/${slug}`,

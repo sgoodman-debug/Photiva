@@ -20,6 +20,7 @@ Key facts:
 
 ## Guides
 
+- [Best duplicate photo finder for Mac (2026)](https://photiva.app/guides/best-duplicate-photo-finder-mac): comparison of Apple Photos' Duplicates album, Photiva, PhotoSweeper, Gemini 2 and CleanMyMac, with prices and who each suits
 - [Remove duplicate photos on Mac](https://photiva.app/guides/remove-duplicate-photos-mac): how to find and remove duplicates without deleting the wrong shots
 - [Find blurry photos on Mac](https://photiva.app/guides/find-blurry-photos-mac): how to detect blurry photos and keep the sharp ones
 - [Organize Apple Photos library](https://photiva.app/guides/organize-apple-photos-library): a library structure you can maintain
