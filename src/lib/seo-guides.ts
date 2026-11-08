@@ -46,7 +46,7 @@ const realRating: { value: string; count: string } | null = null;
  * the visible "Last updated" line, Article schema and the sitemap.
  */
 export const guideDates: Record<GuideSlug, { published: string; modified: string }> = {
-  "remove-duplicate-photos-mac": { published: "2026-03-01", modified: "2026-03-01" },
+  "remove-duplicate-photos-mac": { published: "2026-03-01", modified: "2026-11-08" },
   "find-blurry-photos-mac": { published: "2026-03-01", modified: "2026-03-01" },
   "organize-apple-photos-library": { published: "2026-03-01", modified: "2026-03-01" },
   "mac-photo-cleaner": { published: "2026-03-01", modified: "2026-03-01" },
@@ -80,153 +80,136 @@ export const guideData: Record<GuideSlug, GuideData> = {
   "remove-duplicate-photos-mac": {
     slug: "remove-duplicate-photos-mac",
     primaryKeyword: "remove duplicate photos mac",
-    title: "Remove Duplicate Photos on Mac Safely: Step-by-Step Guide",
+    title: "How to Remove Duplicate Photos on Mac: Step-by-Step (2026)",
     description:
-      "Learn how to remove duplicate photos on Mac with a safe manual workflow and a faster on-device Photiva method for accurate cleanup and safer long-term control.",
-    h1: "How to Remove Duplicate Photos on Mac Without Deleting the Wrong Shots",
+      "How to remove duplicate photos on a Mac: use Apple Photos' free Duplicates album step by step, clean up copies outside Photos and burst shots, and choose which copy to keep.",
+    h1: "How to Remove Duplicate Photos on Mac (Step by Step)",
     quickAnswer: [
-      "To remove duplicate photos on Mac, start with Apple Photos' built-in Duplicates album, then review each pair before merging. That works for basic duplicate cleanup, but it usually misses near-duplicates, edited copies, screenshots saved in multiple locations, and duplicates outside the Photos app.",
-      "If your library is large, a dedicated workflow is safer. You need exact-file checks for true duplicates, visual comparison for similar copies, and a rollback path so mistakes are recoverable. Without those controls, manual deletion can remove a preferred edit or the higher-quality original.",
-      "Photiva combines cryptographic exact matching, visual similarity analysis, and review-first cleanup so you can remove duplicate photos on Mac quickly while keeping full control over what stays in your library.",
+      "Open Photos, click Duplicates under Utilities in the sidebar, check each group, then click Merge. Photos keeps the best copy, combines the details from the others, and moves the extras to Recently Deleted, where you can still recover them for about 30 days. The Duplicates album is free and built into macOS 13 Ventura and later.",
+      "The Duplicates album only looks inside your Photos library, and it can miss edited copies and near-identical burst shots. For photos in Finder folders or on external drives, and for similar shots, add a Finder check or use a dedicated duplicate finder that groups similar photos and lets you review every group before anything is deleted.",
     ],
     entitySentence:
-      "Photiva is a macOS photo cleaner app designed to remove duplicate, blurry, and similar photos while organizing your Apple Photos library with fully on-device processing.",
+      "Photiva is a macOS app that finds exact duplicates, similar shots and blurry photos in Apple Photos and Finder folders, entirely on your Mac, with a free scan and a one-time US$29.99 unlock.",
     sections: [
       {
-        question: "Why do duplicate photos keep appearing on Mac?",
+        question: "Step 1: How do you use the Duplicates album in Apple Photos?",
         paragraphs: [
-          "Duplicate photos usually come from sync overlap rather than one obvious mistake. iCloud Photos, AirDrop, Messages attachments, Finder imports, and edited exports can all create additional copies of the same memory with small metadata differences. Over time, your library accumulates exact duplicates, edited variants, and nearly identical burst shots that look the same during casual browsing.",
-          "The challenge is that not every duplicate should be treated the same way. Some copies have higher resolution, richer metadata, or edits you want to keep. A reliable cleanup process has to detect duplicate classes separately, then help you choose the best file in each group. That is why duplicate cleanup is not just deletion; it is a quality-preservation workflow."
+          "Back up first. Make sure Time Machine (or another backup) has run recently, so nothing is lost if you change your mind later. Then open the Photos app and look in the sidebar under Utilities for Duplicates. If you cannot see Utilities, hover over the sidebar heading and click the arrow to expand it.",
+          "Each row in the Duplicates album is a group of photos Photos thinks are the same. Click into a group and compare the copies at full size. If they really are the same picture, click Merge for that group, or select several groups and click Merge Items to do them together. Photos keeps the highest-quality version, combines details such as captions, keywords and albums, and moves the other copies to Recently Deleted.",
+          "If you use iCloud Photos, merging on your Mac also updates your iPhone and iPad, because it is the same library. Check Recently Deleted afterwards: anything merged by mistake can be recovered there for about 30 days before it is removed for good.",
         ],
       },
       {
-        question: "How can you detect exact duplicates versus visually similar photos?",
+        question: "Why is the Duplicates album missing, or not finding everything?",
         paragraphs: [
-          "Exact duplicates are file-level matches. The most dependable method is hashing each file and comparing cryptographic fingerprints. If two files share the same SHA-256 value, they are byte-for-byte identical and one can be removed safely after confirmation.",
-          "Visually similar photos are different files that depict nearly the same scene. They often differ due to edits, compression, or small crops. Detecting these requires perceptual hashing plus machine-learning-assisted visual comparison. Keeping exact and similar detection separate helps avoid accidental deletions while still reducing clutter that Apple Photos often leaves behind."
+          "The album needs macOS 13 Ventura or later. It only appears once Photos has finished scanning your library in the background and found at least one duplicate. On a large library that can take days, and the scan slows down while you are actively using Photos, so leave your Mac on with Photos closed for a while if the album has not appeared.",
+          "It also only looks inside the Photos library. Pictures saved in Finder folders, Downloads, Desktop, external drives or another app's catalog are invisible to it. And it focuses on copies of the same image, so a burst of ten slightly different frames, or an edited export saved next to the original, often will not be flagged.",
         ],
       },
       {
-        question: "What is the safest manual method to remove duplicate photos on Mac?",
+        question: "Step 2: How do you find duplicate photos outside the Photos app?",
         paragraphs: [
-          "A manual workflow starts in Apple Photos by opening the Duplicates album and reviewing each group before merging. For Finder-based folders, sort by file name, date, and size, then compare suspected copies in Quick Look. Create a temporary review album so you can verify selections before sending anything to Trash.",
-          "After each cleanup pass, inspect your Recently Deleted area and restore anything questionable. Keep a Time Machine backup before major deletion sessions, especially if you manage professional archives or family history collections. Manual cleanup can work for smaller libraries if you follow a disciplined review process and avoid one-click bulk deletion."
+          "In Finder, choose File, then New Smart Folder. Click the plus button and set Kind to Image, then switch to List view and sort by Name or Size. Copies tend to sit next to each other with names like IMG_1234 and IMG_1234 (1), or with identical file sizes. Select a pair and press the space bar to compare them with Quick Look.",
+          "Do not delete straight away. Drag suspected copies into a temporary folder called Review, check it once more, then move it to the Trash. Empty the Trash only when you are sure. On a big collection this is slow, which is where a dedicated app saves time: it compares the files themselves rather than their names.",
         ],
       },
       {
-        question: "Why does manual duplicate cleanup break down at scale?",
+        question: "Step 3: How do you deal with similar photos and bursts?",
         paragraphs: [
-          "Manual review quality drops as volume grows. A library with 40,000 images can contain thousands of near-duplicates spread across years, projects, and devices. Context switching between folders and albums increases the chance of deleting a keeper and retaining an inferior copy.",
-          "Manual methods also miss hidden storage waste, such as duplicated Live Photo video segments and large derivative exports. Even if you complete a full pass once, the same cycle returns after new imports. Scalable cleanup needs repeatable rules, quality scoring, and automated grouping that you can audit quickly."
+          "Similar photos are different shots that look almost the same: a burst, five attempts at the same group photo, or a picture and its edited export. They usually take up more space than true duplicates, but they need a human decision about which one is best.",
+          "For bursts in Photos, open the burst, click Make a Selection, tick the frames you want to keep and click Done; you can then let Photos remove the rest. For everything else, view the shots side by side and keep the one that is sharpest, best exposed and has everyone's eyes open. Apps that score sharpness can sort the candidates for you so you only confirm the choice.",
         ],
       },
       {
-        question: "How should you choose which duplicate to keep?",
+        question: "How do you decide which copy to keep?",
         paragraphs: [
-          "Prioritize image quality first: sharpness, exposure, and resolution. Then compare metadata completeness, including EXIF capture date, lens data, and location tags, because these fields improve future organization and search quality. If one version contains edits you rely on, preserve it and archive alternatives.",
-          "A practical rule set is to keep the sharpest high-resolution original, retain edited deliverables you actively use, and discard lower-quality copies or unnecessary exports. This keeps your library useful, not just smaller. It also aligns duplicate cleanup with long-term retrieval goals rather than short-term storage savings alone."
+          "Keep the version with the highest resolution and the sharpest detail. If one copy has edits you like, keep that one, and check it still has the original date and location, because those details are what let you find the photo again later. Edited exports for printing or sharing can usually go once the original is safe.",
+          "When two copies look identical, check the file size or dimensions in the Info panel (Command-I). The larger one is normally the original; smaller copies are often versions that were compressed when sent through Messages or social media.",
         ],
       },
       {
-        question: "How does duplicate cleanup improve Mac performance and storage planning?",
+        question: "When should you use a dedicated duplicate finder instead?",
         paragraphs: [
-          "Removing duplicates frees SSD space, but the bigger advantage is library responsiveness. Smaller, cleaner collections reduce indexing overhead, simplify backup cycles, and speed up visual review. Large iCloud libraries also sync more predictably when low-value duplicate data is removed.",
-          "Operationally, duplicate cleanup gives you a better baseline for additional optimization, such as HEIF conversion, archive exports, and event-based organization. Once duplicate noise is gone, every downstream workflow becomes more accurate because your tools are working on cleaner source material."
+          "If your library runs to tens of thousands of photos, lives partly outside Photos, or is full of bursts, a dedicated app does the comparison for you. Look for one that groups exact and similar photos separately, picks a suggested keeper you can override, shows you every group before deleting, and sends files to the Trash rather than erasing them.",
+          "Photiva does this on your Mac without uploading anything. It checks exact copies with a file fingerprint, finds similar shots by comparing the images themselves, scores sharpness to flag blurry frames, and scans Photos libraries and any folder. You can run the full scan free to see how many duplicates and how much space it finds before deciding to pay. Our comparison of Apple Photos, Photiva, PhotoSweeper, Gemini 2 and CleanMyMac covers which app suits which situation.",
         ],
       },
       {
-        question: "What workflow should professionals use when cleaning client archives?",
+        question: "How do you stop duplicates coming back?",
         paragraphs: [
-          "Professional photographers and content teams should treat duplicate cleanup as a governed process with clear gates. Start with a read-only scan, export grouped reports, and document keep rules for edited masters, RAW originals, and delivery exports. This prevents accidental loss of revenue-critical assets and gives teams repeatable standards for future projects.",
-          "A reliable professional workflow also separates archival preservation from active workspace cleanup. Keep untouched master backups on external storage, then run duplicate cleanup on working copies with rollback enabled. This two-layer model protects client deliverables while still reclaiming storage and reducing review fatigue in daily production environments."
-        ],
-      },
-      {
-        question: "How can families and shared Mac users avoid duplicate cleanup conflicts?",
-        paragraphs: [
-          "In shared households, duplicate cleanup often fails because one person optimizes for storage while another optimizes for memories. Create household rules first: protect favorites, preserve key events, and review deletions in weekly batches. A collaborative process reduces disagreements and avoids permanent mistakes from rushed decisions.",
-          "Use event tags and dedicated family albums to mark non-negotiable photos before cleanup. Then process duplicates in staged rounds so everyone can verify what remains. This approach creates confidence for non-technical users and makes cleanup sustainable even when multiple devices and import habits feed the same library."
-        ],
-      },
-      {
-        question: "What monthly maintenance checklist keeps duplicate clutter from returning?",
-        paragraphs: [
-          "A practical monthly checklist includes four steps: scan new imports, resolve duplicate groups, review blurry outliers, and convert oversized files when appropriate. Keeping sessions short and frequent is more effective than infrequent large cleanups, because small changes are easier to verify and less risky to roll back.",
-          "Track progress with simple metrics such as duplicates removed, gigabytes reclaimed, and number of events normalized. These indicators help you catch drift early and confirm your process is working. Over time, monthly maintenance reduces total cleanup effort while preserving a high-quality, searchable photo library."
+          "Most duplicates come from importing the same photos twice: AirDrop plus iCloud, saving from Messages, or importing a camera card that was already imported. Turn on iCloud Photos on every device rather than also AirDropping, and when importing a camera card into Photos leave Import All New Items as the default so it skips what is already there.",
+          "Then make cleanup a habit rather than a project. A quick pass after holidays or big events, plus checking the Duplicates album every month or two, keeps the library small and stops a backlog of thousands building up again.",
         ],
       },
     ],
     manualMethod: [
-      "Open Apple Photos and check the Duplicates album first. Merge only after zooming into each item and confirming quality differences.",
-      "For folders outside Photos, sort in Finder by size and date, then compare with Quick Look to validate suspected duplicates.",
-      "Move candidates to a temporary review folder before final deletion, and keep Time Machine snapshots enabled for recovery.",
+      "Back up your Mac with Time Machine.",
+      "In Photos, open Utilities, then Duplicates, check each group and click Merge.",
+      "Check Recently Deleted and restore anything merged by mistake.",
+      "For Finder folders, make a Smart Folder of images, sort by name or size, and compare pairs with Quick Look.",
+      "Move suspected copies to a Review folder, check them, then move them to the Trash.",
     ],
     manualLimitations: [
-      "Apple Photos Duplicates does not consistently catch edited or near-identical variants.",
-      "Finder review is slow and error-prone for large libraries with similar file names.",
-      "No built-in scoring for blur, exposure, or best-shot selection across burst groups.",
-      "No dedicated rollback workflow for organization decisions beyond general system restore paths.",
+      "The Duplicates album only covers the Photos library, not Finder folders or external drives.",
+      "It can miss edited copies and near-identical burst shots.",
+      "It can take days to appear on a large library because it scans in the background.",
+      "Finder comparison by name and size is slow and misses copies that were renamed.",
+      "Nothing built in scores sharpness to help pick the best shot in a group.",
     ],
     howPhotivaHelps: [
-      "SHA-256 duplicate detection identifies exact file-level duplicates with deterministic confidence.",
-      "Perceptual hashing plus Vision ML finds visually similar shots that are not byte-identical.",
-      "Laplacian variance blur detection highlights lower-quality options before you delete.",
-      "EXIF-based organization and event auto-detection keep the remaining photos structured after cleanup.",
-      "HEIF conversion plus compression reduces storage after deduplication without cloud uploads.",
-      "30-day rollback safety lets you recover from cleanup mistakes.",
-      "100% on-device privacy keeps photo analysis local to your Mac.",
+      "Finds exact duplicates by file fingerprint, even when copies have different names.",
+      "Groups visually similar shots and bursts, and suggests the sharpest one to keep.",
+      "Scans Apple Photos libraries and any folder, including external drives.",
+      "Shows every group for review before anything is removed, and moves files to the Trash.",
+      "Lets you roll back organisation changes for 30 days.",
+      "Runs entirely on your Mac, with no uploads and no account.",
+      "Free scan; a one-time US$29.99 unlocks cleanup, with no subscription.",
     ],
     pros: [
-      "Comprehensive duplicate coverage across exact and similar images.",
-      "Safer decision-making with quality signals and rollback controls.",
-      "Faster review workflows for large libraries.",
-      "No subscription and no cloud processing required.",
+      "Apple's Duplicates album is free and good enough for many Photos-only libraries.",
+      "A dedicated app covers folders, drives and similar shots that Photos misses.",
+      "Review-first cleanup with Trash and rollback keeps mistakes recoverable.",
     ],
     cons: [
-      "Manual-only workflows remain viable for very small libraries and occasional cleanup.",
-      "Professional users still need external backup strategy beyond app-level rollback.",
-      "Any automation requires initial review preferences to be configured correctly.",
+      "Any cleanup needs a backup first; app-level undo is not a replacement for one.",
+      "Choosing between similar shots still takes your judgement.",
+      "Photiva does not connect to Lightroom Classic or Capture One catalogs.",
     ],
     faqs: [
       {
-        question: "Can I remove duplicate photos on Mac without deleting originals?",
+        question: "Does Mac have a built-in duplicate photo remover?",
         answer:
-          "Yes. Use grouped review and quality checks before deletion. A rollback window and backup strategy reduce risk when processing large libraries.",
+          "Yes. On macOS 13 Ventura or later, Photos has a Duplicates album under Utilities in the sidebar. Open it, check each group and click Merge. It only covers your Photos library.",
       },
       {
-        question: "Does Apple Photos find all duplicates?",
+        question: "Why don't I see the Duplicates album in Photos?",
         answer:
-          "No. It helps with many exact duplicates, but it can miss edited variants and cross-folder near-duplicates outside Photos.",
+          "It only appears after Photos has scanned your library in the background and found at least one duplicate, which can take days on a big library. It also needs macOS 13 Ventura or later.",
+      },
+      {
+        question: "Where do merged duplicates go?",
+        answer:
+          "The extra copies move to Recently Deleted in Photos, where you can recover them for about 30 days before they are permanently removed.",
+      },
+      {
+        question: "Will removing duplicates on my Mac delete them from my iPhone?",
+        answer:
+          "If you use iCloud Photos, yes: your Mac, iPhone and iPad share one library, so a merge or deletion on one device applies to all of them. Without iCloud Photos, changes stay on the Mac.",
       },
       {
         question: "What is the difference between duplicate and similar photos?",
         answer:
-          "Duplicates are exact file matches. Similar photos are visually related files that differ by edits, crop, size, or encoding.",
+          "Duplicates are the same image saved more than once, sometimes at a different size or format. Similar photos are different shots that look almost the same, such as burst frames. Similar shots need you to choose the best one.",
       },
       {
-        question: "How much storage can duplicate cleanup recover?",
+        question: "How much space will removing duplicates free up?",
         answer:
-          "Results vary by library size, but users often recover meaningful SSD space once duplicates, burst leftovers, and repeated exports are removed.",
-      },
-      {
-        question: "Is duplicate cleanup safe with iCloud Photos?",
-        answer:
-          "It is safe when done carefully. Validate changes in small batches and confirm synchronization before large deletion rounds.",
-      },
-      {
-        question: "Why is rollback important for duplicate cleanup?",
-        answer:
-          "Rollback lets you restore content if a kept/deleted decision turns out to be wrong after later review.",
-      },
-      {
-        question: "Can I run duplicate cleanup regularly?",
-        answer:
-          "Yes. Monthly or post-import passes prevent backlog and keep photo libraries easier to maintain.",
+          "It depends on how your photos were imported. Libraries fed by several devices, Messages and repeated imports usually have the most. Photiva's free scan shows the exact amount for your library before you delete anything.",
       },
     ],
-    ctaHeading: "Ready to remove duplicate photos on Mac in one guided workflow?",
+    ctaHeading: "See how many duplicates your Mac is hiding",
     ctaCopy:
-      "Use Photiva to detect exact duplicates and visually similar images, then clean safely with rollback protection.",
+      "Run Photiva's free scan to find exact duplicates, similar shots and blurry photos across Photos and your folders, and see how much space you would get back before you pay anything.",
   },
   "find-blurry-photos-mac": {
     slug: "find-blurry-photos-mac",

@@ -153,6 +153,11 @@ export function GuidePage({ slug }: GuidePageProps) {
           Which related Photiva guides should you read next?
         </h2>
         <ul className="mt-5 text-muted list-disc list-inside space-y-2">
+          <li>
+            <Link className="text-accent hover:underline" href="/guides/best-duplicate-photo-finder-mac">
+              Best duplicate photo finder for Mac (2026): Apple Photos, Photiva, PhotoSweeper, Gemini 2 and CleanMyMac compared
+            </Link>
+          </li>
           {relatedLinks.map((item) => (
             <li key={item}>
               <Link className="text-accent hover:underline" href={`/guides/${item}`}>
