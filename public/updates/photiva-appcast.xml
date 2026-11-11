@@ -19,6 +19,29 @@
              ============================================================ -->
 
         <item>
+            <title>Version 1.0.32</title>
+            <description><![CDATA[
+                <h2>What's New in 1.0.32</h2>
+                <ul>
+                    <li>Licence activation now unlocks all paid features immediately, without restarting Photiva</li>
+                    <li>Photos Library thumbnails progressively sharpen while keeping large-library scrolling responsive</li>
+                    <li>Adds a Large Videos view for reviewing Photos Library videos by size and marking them for deletion</li>
+                    <li>Improves saved-library restoration with clear missing-drive guidance and immediate source saving</li>
+                </ul>
+            ]]></description>
+            <pubDate>Wed, 11 Nov 2026 21:41:18 +0000</pubDate>
+            <sparkle:version>33</sparkle:version>
+            <sparkle:shortVersionString>1.0.32</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/sgoodman-debug/photivareleases/releases/download/v1.0.32/Photiva-1.0.32.zip"
+                sparkle:edSignature="4nFh2NfsKSYZLhyfJZnZXJJfUKx1pbJyL+6su+OtR4neca6zZxt0lIASv7HqIEqtyih9eOcRJCmX0DWaq1V7DQ=="
+                length="8238561"
+                type="application/octet-stream"
+            />
+        </item>
+
+        <item>
             <title>Version 1.0.31</title>
             <description><![CDATA[
                 <h2>What's New in 1.0.31</h2>
