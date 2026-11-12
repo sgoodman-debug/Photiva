@@ -100,6 +100,7 @@ export default function RootLayout({
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-EZLYFY63MR');
+          gtag('config', 'AW-18562960603');
         `}</Script>
         {/* Meta Pixel — lazyOnload defers fbevents.js (~98 KiB) until the
             browser is fully idle, well after LCP. fbq() calls are safe

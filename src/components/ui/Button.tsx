@@ -97,6 +97,12 @@ export function Button({
           location: trackingLocation,
           transport_type: "beacon",
         });
+        window.gtag("event", "conversion", {
+          send_to: "AW-18562960603/TFT0CLGCnbQdENuZwZNF",
+          currency: "USD",
+          value: 29.99,
+          transport_type: "beacon",
+        });
       }
     }
 
